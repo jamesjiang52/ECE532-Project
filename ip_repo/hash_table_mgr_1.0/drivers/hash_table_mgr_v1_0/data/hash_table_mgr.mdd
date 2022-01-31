@@ -1,0 +1,10 @@
+
+
+OPTION psf_version = 2.1;
+
+BEGIN DRIVER hash_table_mgr
+	OPTION supported_peripherals = (hash_table_mgr);
+	OPTION copyfiles = all;
+	OPTION VERSION = 1.0;
+	OPTION NAME = hash_table_mgr;
+END DRIVER
