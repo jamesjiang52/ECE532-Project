@@ -3,16 +3,16 @@ proc init_gui { IPINST } {
   ipgui::add_param $IPINST -name "Component_Name"
   #Adding Page
   set Page_0 [ipgui::add_page $IPINST -name "Page 0"]
-  set C_S00_AXI_DATA_WIDTH [ipgui::add_param $IPINST -name "C_S00_AXI_DATA_WIDTH" -parent ${Page_0} -widget comboBox]
-  set_property tooltip {Width of S_AXI data bus} ${C_S00_AXI_DATA_WIDTH}
-  set C_S00_AXI_ADDR_WIDTH [ipgui::add_param $IPINST -name "C_S00_AXI_ADDR_WIDTH" -parent ${Page_0}]
-  set_property tooltip {Width of S_AXI address bus} ${C_S00_AXI_ADDR_WIDTH}
+  ipgui::add_param $IPINST -name "C_S00_AXI_DATA_WIDTH" -parent ${Page_0} -widget comboBox
+  ipgui::add_param $IPINST -name "C_S00_AXI_ADDR_WIDTH" -parent ${Page_0}
   ipgui::add_param $IPINST -name "C_S00_AXI_BASEADDR" -parent ${Page_0}
   ipgui::add_param $IPINST -name "C_S00_AXI_HIGHADDR" -parent ${Page_0}
 
   ipgui::add_param $IPINST -name "HASH_TABLE_ADDR_WIDTH"
   ipgui::add_param $IPINST -name "HASH_TABLE_DATA_WIDTH"
   ipgui::add_param $IPINST -name "HASH_TABLE_OP_WIDTH"
+  ipgui::add_param $IPINST -name "HASH_TABLE_OTYPE_WIDTH"
+  ipgui::add_param $IPINST -name "HASH_TABLE_KEY_WIDTH"
 
 }
 
@@ -34,12 +34,30 @@ proc validate_PARAM_VALUE.HASH_TABLE_DATA_WIDTH { PARAM_VALUE.HASH_TABLE_DATA_WI
 	return true
 }
 
+proc update_PARAM_VALUE.HASH_TABLE_KEY_WIDTH { PARAM_VALUE.HASH_TABLE_KEY_WIDTH } {
+	# Procedure called to update HASH_TABLE_KEY_WIDTH when any of the dependent parameters in the arguments change
+}
+
+proc validate_PARAM_VALUE.HASH_TABLE_KEY_WIDTH { PARAM_VALUE.HASH_TABLE_KEY_WIDTH } {
+	# Procedure called to validate HASH_TABLE_KEY_WIDTH
+	return true
+}
+
 proc update_PARAM_VALUE.HASH_TABLE_OP_WIDTH { PARAM_VALUE.HASH_TABLE_OP_WIDTH } {
 	# Procedure called to update HASH_TABLE_OP_WIDTH when any of the dependent parameters in the arguments change
 }
 
 proc validate_PARAM_VALUE.HASH_TABLE_OP_WIDTH { PARAM_VALUE.HASH_TABLE_OP_WIDTH } {
 	# Procedure called to validate HASH_TABLE_OP_WIDTH
+	return true
+}
+
+proc update_PARAM_VALUE.HASH_TABLE_OTYPE_WIDTH { PARAM_VALUE.HASH_TABLE_OTYPE_WIDTH } {
+	# Procedure called to update HASH_TABLE_OTYPE_WIDTH when any of the dependent parameters in the arguments change
+}
+
+proc validate_PARAM_VALUE.HASH_TABLE_OTYPE_WIDTH { PARAM_VALUE.HASH_TABLE_OTYPE_WIDTH } {
+	# Procedure called to validate HASH_TABLE_OTYPE_WIDTH
 	return true
 }
 
@@ -103,5 +121,15 @@ proc update_MODELPARAM_VALUE.HASH_TABLE_DATA_WIDTH { MODELPARAM_VALUE.HASH_TABLE
 proc update_MODELPARAM_VALUE.HASH_TABLE_OP_WIDTH { MODELPARAM_VALUE.HASH_TABLE_OP_WIDTH PARAM_VALUE.HASH_TABLE_OP_WIDTH } {
 	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
 	set_property value [get_property value ${PARAM_VALUE.HASH_TABLE_OP_WIDTH}] ${MODELPARAM_VALUE.HASH_TABLE_OP_WIDTH}
+}
+
+proc update_MODELPARAM_VALUE.HASH_TABLE_OTYPE_WIDTH { MODELPARAM_VALUE.HASH_TABLE_OTYPE_WIDTH PARAM_VALUE.HASH_TABLE_OTYPE_WIDTH } {
+	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
+	set_property value [get_property value ${PARAM_VALUE.HASH_TABLE_OTYPE_WIDTH}] ${MODELPARAM_VALUE.HASH_TABLE_OTYPE_WIDTH}
+}
+
+proc update_MODELPARAM_VALUE.HASH_TABLE_KEY_WIDTH { MODELPARAM_VALUE.HASH_TABLE_KEY_WIDTH PARAM_VALUE.HASH_TABLE_KEY_WIDTH } {
+	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
+	set_property value [get_property value ${PARAM_VALUE.HASH_TABLE_KEY_WIDTH}] ${MODELPARAM_VALUE.HASH_TABLE_KEY_WIDTH}
 }
 
