@@ -398,12 +398,28 @@
 	            slv_reg0 <= 0;
               end
 	          5'h10: begin
+	           if ((ht_output_valid == 1) && ht_output_ready) begin
+                    slv_reg16 <= 1;
+                    slv_reg17 <= ht_output_addr;
+                    slv_reg18 <= ht_output_type;
+                    slv_reg19 <= ht_output_data[C_S_AXI_DATA_WIDTH-1:0];
+                    slv_reg20 <= ht_output_data[2*C_S_AXI_DATA_WIDTH-1:C_S_AXI_DATA_WIDTH];
+                    slv_reg21 <= ht_output_key[C_S_AXI_DATA_WIDTH-1:0];
+                    slv_reg22 <= ht_output_key[2*C_S_AXI_DATA_WIDTH-1:C_S_AXI_DATA_WIDTH];
+                    slv_reg23 <= ht_output_key[3*C_S_AXI_DATA_WIDTH-1:2*C_S_AXI_DATA_WIDTH];
+                    slv_reg24 <= ht_output_key[4*C_S_AXI_DATA_WIDTH-1:3*C_S_AXI_DATA_WIDTH];
+                    slv_reg25 <= ht_output_key[5*C_S_AXI_DATA_WIDTH-1:4*C_S_AXI_DATA_WIDTH];
+                    slv_reg26 <= ht_output_key[6*C_S_AXI_DATA_WIDTH-1:5*C_S_AXI_DATA_WIDTH];
+                    slv_reg27 <= ht_output_key[7*C_S_AXI_DATA_WIDTH-1:6*C_S_AXI_DATA_WIDTH];
+                    slv_reg28 <= ht_output_key[8*C_S_AXI_DATA_WIDTH-1:7*C_S_AXI_DATA_WIDTH];
+                end else begin
 	            for ( byte_index = 0; byte_index <= (C_S_AXI_DATA_WIDTH/8)-1; byte_index = byte_index+1 )
 	              if ( S_AXI_WSTRB[byte_index] == 1 ) begin
 	                // Respective byte enables are asserted as per write strobes 
 	                // Slave register 16
 	                slv_reg16[(byte_index*8) +: 8] <= S_AXI_WDATA[(byte_index*8) +: 8];
 	              end
+	            end
 	            slv_reg0 <= 0;
               end
 	          default : begin
@@ -411,6 +427,21 @@
 	                    end
 	        endcase
 	      end else begin
+                if ((ht_output_valid == 1) && ht_output_ready) begin
+                    slv_reg16 <= 1;
+                    slv_reg17 <= ht_output_addr;
+                    slv_reg18 <= ht_output_type;
+                    slv_reg19 <= ht_output_data[C_S_AXI_DATA_WIDTH-1:0];
+                    slv_reg20 <= ht_output_data[2*C_S_AXI_DATA_WIDTH-1:C_S_AXI_DATA_WIDTH];
+                    slv_reg21 <= ht_output_key[C_S_AXI_DATA_WIDTH-1:0];
+                    slv_reg22 <= ht_output_key[2*C_S_AXI_DATA_WIDTH-1:C_S_AXI_DATA_WIDTH];
+                    slv_reg23 <= ht_output_key[3*C_S_AXI_DATA_WIDTH-1:2*C_S_AXI_DATA_WIDTH];
+                    slv_reg24 <= ht_output_key[4*C_S_AXI_DATA_WIDTH-1:3*C_S_AXI_DATA_WIDTH];
+                    slv_reg25 <= ht_output_key[5*C_S_AXI_DATA_WIDTH-1:4*C_S_AXI_DATA_WIDTH];
+                    slv_reg26 <= ht_output_key[6*C_S_AXI_DATA_WIDTH-1:5*C_S_AXI_DATA_WIDTH];
+                    slv_reg27 <= ht_output_key[7*C_S_AXI_DATA_WIDTH-1:6*C_S_AXI_DATA_WIDTH];
+                    slv_reg28 <= ht_output_key[8*C_S_AXI_DATA_WIDTH-1:7*C_S_AXI_DATA_WIDTH];
+                end
 	        slv_reg0 <= 0;
 	      end
 	  end
@@ -574,26 +605,6 @@
 	assign ht_input_op    = slv_reg2;
 	assign ht_input_data  = {slv_reg4, slv_reg3};
 	assign ht_input_key   = {slv_reg12, slv_reg11, slv_reg10, slv_reg9, slv_reg8, slv_reg7, slv_reg6, slv_reg5};
-	
-    always @(posedge S_AXI_ACLK) begin
-        if ((ht_output_valid == 1) && ht_output_ready) begin
-            slv_reg16 <= 1;
-            slv_reg17 <= ht_output_addr;
-            slv_reg18 <= ht_output_type;
-            slv_reg19 <= ht_output_data[C_S_AXI_DATA_WIDTH-1:0];
-            slv_reg20 <= ht_output_data[2*C_S_AXI_DATA_WIDTH-1:C_S_AXI_DATA_WIDTH];
-            slv_reg21 <= ht_output_key[C_S_AXI_DATA_WIDTH-1:0];
-            slv_reg22 <= ht_output_key[2*C_S_AXI_DATA_WIDTH-1:C_S_AXI_DATA_WIDTH];
-            slv_reg23 <= ht_output_key[3*C_S_AXI_DATA_WIDTH-1:2*C_S_AXI_DATA_WIDTH];
-            slv_reg24 <= ht_output_key[4*C_S_AXI_DATA_WIDTH-1:3*C_S_AXI_DATA_WIDTH];
-            slv_reg25 <= ht_output_key[5*C_S_AXI_DATA_WIDTH-1:4*C_S_AXI_DATA_WIDTH];
-            slv_reg26 <= ht_output_key[6*C_S_AXI_DATA_WIDTH-1:5*C_S_AXI_DATA_WIDTH];
-            slv_reg27 <= ht_output_key[7*C_S_AXI_DATA_WIDTH-1:6*C_S_AXI_DATA_WIDTH];
-            slv_reg28 <= ht_output_key[8*C_S_AXI_DATA_WIDTH-1:7*C_S_AXI_DATA_WIDTH];
-        //end else begin
-            //slv_reg16 <= 0;
-        end
-    end
     
     assign ht_output_ready = (slv_reg16 == 0);
 

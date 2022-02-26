@@ -912,6 +912,9 @@
 	
 	// issue operations
 	always @(posedge M_AXI_ACLK) begin
+	   if (M_AXI_ARESETN == 0)
+			;
+	   else begin
 	   ht_init_wr <= 0;
        // FIXME: structural hazard
 	   //if (writes_done == 1) begin  // can issue write
@@ -943,10 +946,14 @@
 	           end
 	       end
 	   //end
+	   end
 	end
 	
 	// read from memory
 	always @(posedge M_AXI_ACLK) begin
+	   if (M_AXI_ARESETN == 0)
+			;
+	   else begin
 	    if (M_AXI_RVALID && axi_rready) begin
 	       for (i = 0; i < BUFFER_SIZE; i = i + 1) begin
 	           if (buffer_status[i] == EXEC_RD) begin
@@ -966,11 +973,15 @@
 	           end
 	       end
 	    end
+	   end
 	end
 	
 	// output buffer
     always @(posedge M_AXI_ACLK) begin
         ht_output_valid <= 0;
+	   if (M_AXI_ARESETN == 0)
+			;
+	   else begin
         if (ht_output_ready) begin
             for (i = 0; i < BUFFER_SIZE; i = i + 1) begin
                 if (buffer_status[i] == RET_RD) begin
@@ -991,6 +1002,7 @@
 	            end
             end
 	    end
+	   end
 	end
 
 	// User logic ends
