@@ -586,6 +586,10 @@
 	                   (empty_key_wr && (ht_wr_op == INSERT_OP) && (read_index == MEMORY_ROW_SIZE - 2)))) begin
 	                 mst_exec_state_wr <= WRITE;
 	                 //read_index <= 4'b0;
+	             end else if (axi_rready && correct_key_rd && (ht_wr_op == READ_OP) && (read_index == MEMORY_ROW_SIZE - 2)) begin
+	               mst_exec_state_wr <= READ;
+	               read_issued <= 1'b0;
+	               read_index <= 4'b0;
 	             end else if ((!correct_key_wr && ((ht_wr_op == UPDATE_OP) || (ht_wr_op == DELETE_OP))) || 
 	                   (!empty_key_wr && (ht_wr_op == INSERT_OP))) begin
 	                 mst_exec_state_wr <= FIND;
@@ -637,12 +641,39 @@
 	                    end
 	            end
               end
+              READ: begin
+	            // This state is responsible to issue start_single_read pulse to
+	            // initiate a read transaction. Read transactions will be
+	            // issued until last_read signal is asserted.
+	             // read controller
+	             if (reads_done) begin
+	                 mst_exec_state_wr <= IDLE;
+	             end else begin
+	                 mst_exec_state_wr <= READ;
+
+	                 if (~axi_arvalid && ~M_AXI_RVALID && ~last_read && ~start_single_read && ~read_issued)
+	                   begin
+	                     start_single_read <= 1'b1;
+	                     read_issued <= 1'b1;
+	                   end
+	                 else if (axi_rready)
+	                   begin
+	                     read_issued <= 1'b0;
+	                     read_index <= read_index + 1'b1;
+	                   end
+	                 else
+	                   begin
+	                     start_single_read <= 1'b0; //Negate to generate a pulse
+	                   end
+	             end
+               end
 	          default:
 	               mst_exec_state_wr <= IDLE;
 	        endcase
 	    end
 	  end //MASTER_EXECUTION_PROC
 
+    /*
 	  //implement master command interface state machine (read)
 	  always @(posedge M_AXI_ACLK) begin
 	    if (M_AXI_ARESETN == 1'b0)
@@ -733,6 +764,7 @@
 	        endcase
 	    end
 	  end //MASTER_EXECUTION_PROC
+    */
 
 	  //Terminal write count
 
@@ -892,177 +924,205 @@
            for (i = 0; i < NUM_LOCKS; i = i + 1) begin
                locks[i] <= 0;
            end
-	   end else if (ht_input_valid == 1) begin
+	   end else begin
+	   if (ht_input_valid == 1) begin
 	       // fix multiply-driven net...
 	       if (buffer_status[0] == EMPTY) begin
 	           data_buffer[0] <= ht_input_data;
 	           addr_buffer[0] <= ht_input_addr;
 	           key_buffer[0]  <= ht_input_key;
 	           op_buffer[0]   <= ht_input_op;
+	           buffer_status[0] <= ISSUE;
 	       end else if (buffer_status[1] == EMPTY) begin
 	           data_buffer[1] <= ht_input_data;
 	           addr_buffer[1] <= ht_input_addr;
 	           key_buffer[1]  <= ht_input_key;
 	           op_buffer[1]   <= ht_input_op;
+	           buffer_status[1] <= ISSUE;
 	       end else if (buffer_status[2] == EMPTY) begin
 	           data_buffer[2] <= ht_input_data;
 	           addr_buffer[2] <= ht_input_addr;
 	           key_buffer[2]  <= ht_input_key;
 	           op_buffer[2]   <= ht_input_op;
+	           buffer_status[2] <= ISSUE;
 	       end else if (buffer_status[3] == EMPTY) begin
 	           data_buffer[3] <= ht_input_data;
 	           addr_buffer[3] <= ht_input_addr;
 	           key_buffer[3]  <= ht_input_key;
 	           op_buffer[3]   <= ht_input_op;
+	           buffer_status[3] <= ISSUE;
 	       end else if (buffer_status[4] == EMPTY) begin
 	           data_buffer[4] <= ht_input_data;
 	           addr_buffer[4] <= ht_input_addr;
 	           key_buffer[4]  <= ht_input_key;
 	           op_buffer[4]   <= ht_input_op;
+	           buffer_status[4] <= ISSUE;
 	       end else if (buffer_status[5] == EMPTY) begin
 	           data_buffer[5] <= ht_input_data;
 	           addr_buffer[5] <= ht_input_addr;
 	           key_buffer[5]  <= ht_input_key;
 	           op_buffer[5]   <= ht_input_op;
+	           buffer_status[5] <= ISSUE;
 	       end else if (buffer_status[6] == EMPTY) begin
 	           data_buffer[6] <= ht_input_data;
 	           addr_buffer[6] <= ht_input_addr;
 	           key_buffer[6]  <= ht_input_key;
 	           op_buffer[6]   <= ht_input_op;
+	           buffer_status[6] <= ISSUE;
 	       end else if (buffer_status[7] == EMPTY) begin
 	           data_buffer[7] <= ht_input_data;
 	           addr_buffer[7] <= ht_input_addr;
 	           key_buffer[7]  <= ht_input_key;
 	           op_buffer[7]   <= ht_input_op;
+	           buffer_status[7] <= ISSUE;
 	       end else if (buffer_status[8] == EMPTY) begin
 	           data_buffer[8] <= ht_input_data;
 	           addr_buffer[8] <= ht_input_addr;
 	           key_buffer[8]  <= ht_input_key;
 	           op_buffer[8]   <= ht_input_op;
+	           buffer_status[8] <= ISSUE;
 	       end else if (buffer_status[9] == EMPTY) begin
 	           data_buffer[9] <= ht_input_data;
 	           addr_buffer[9] <= ht_input_addr;
 	           key_buffer[9]  <= ht_input_key;
 	           op_buffer[9]   <= ht_input_op;
+	           buffer_status[9] <= ISSUE;
 	       end else if (buffer_status[10] == EMPTY) begin
 	           data_buffer[10] <= ht_input_data;
 	           addr_buffer[10] <= ht_input_addr;
 	           key_buffer[10]  <= ht_input_key;
 	           op_buffer[10]   <= ht_input_op;
+	           buffer_status[10] <= ISSUE;
 	       end else if (buffer_status[11] == EMPTY) begin
 	           data_buffer[11] <= ht_input_data;
 	           addr_buffer[11] <= ht_input_addr;
 	           key_buffer[11]  <= ht_input_key;
 	           op_buffer[11]   <= ht_input_op;
+	           buffer_status[11] <= ISSUE;
 	       end else if (buffer_status[12] == EMPTY) begin
 	           data_buffer[12] <= ht_input_data;
 	           addr_buffer[12] <= ht_input_addr;
 	           key_buffer[12]  <= ht_input_key;
 	           op_buffer[12]   <= ht_input_op;
+	           buffer_status[12] <= ISSUE;
 	       end else if (buffer_status[13] == EMPTY) begin
 	           data_buffer[13] <= ht_input_data;
 	           addr_buffer[13] <= ht_input_addr;
 	           key_buffer[13]  <= ht_input_key;
 	           op_buffer[13]   <= ht_input_op;
+	           buffer_status[13] <= ISSUE;
 	       end else if (buffer_status[14] == EMPTY) begin
 	           data_buffer[14] <= ht_input_data;
 	           addr_buffer[14] <= ht_input_addr;
 	           key_buffer[14]  <= ht_input_key;
 	           op_buffer[14]   <= ht_input_op;
+	           buffer_status[14] <= ISSUE;
 	       end else if (buffer_status[15] == EMPTY) begin
 	           data_buffer[15] <= ht_input_data;
 	           addr_buffer[15] <= ht_input_addr;
 	           key_buffer[15]  <= ht_input_key;
 	           op_buffer[15]   <= ht_input_op;
+	           buffer_status[15] <= ISSUE;
 	       end else if (buffer_status[16] == EMPTY) begin
 	           data_buffer[16] <= ht_input_data;
 	           addr_buffer[16] <= ht_input_addr;
 	           key_buffer[16]  <= ht_input_key;
 	           op_buffer[16]   <= ht_input_op;
+	           buffer_status[16] <= ISSUE;
 	       end else if (buffer_status[17] == EMPTY) begin
 	           data_buffer[17] <= ht_input_data;
 	           addr_buffer[17] <= ht_input_addr;
 	           key_buffer[17]  <= ht_input_key;
 	           op_buffer[17]   <= ht_input_op;
+	           buffer_status[17] <= ISSUE;
 	       end else if (buffer_status[18] == EMPTY) begin
 	           data_buffer[18] <= ht_input_data;
 	           addr_buffer[18] <= ht_input_addr;
 	           key_buffer[18]  <= ht_input_key;
 	           op_buffer[18]   <= ht_input_op;
+	           buffer_status[18] <= ISSUE;
 	       end else if (buffer_status[19] == EMPTY) begin
 	           data_buffer[19] <= ht_input_data;
 	           addr_buffer[19] <= ht_input_addr;
 	           key_buffer[19]  <= ht_input_key;
 	           op_buffer[19]   <= ht_input_op;
+	           buffer_status[19] <= ISSUE;
 	       end else if (buffer_status[20] == EMPTY) begin
 	           data_buffer[20] <= ht_input_data;
 	           addr_buffer[20] <= ht_input_addr;
 	           key_buffer[20]  <= ht_input_key;
 	           op_buffer[20]   <= ht_input_op;
+	           buffer_status[20] <= ISSUE;
 	       end else if (buffer_status[21] == EMPTY) begin
 	           data_buffer[21] <= ht_input_data;
 	           addr_buffer[21] <= ht_input_addr;
 	           key_buffer[21]  <= ht_input_key;
 	           op_buffer[21]   <= ht_input_op;
+	           buffer_status[21] <= ISSUE;
 	       end else if (buffer_status[22] == EMPTY) begin
 	           data_buffer[22] <= ht_input_data;
 	           addr_buffer[22] <= ht_input_addr;
 	           key_buffer[22]  <= ht_input_key;
 	           op_buffer[22]   <= ht_input_op;
+	           buffer_status[22] <= ISSUE;
 	       end else if (buffer_status[23] == EMPTY) begin
 	           data_buffer[23] <= ht_input_data;
 	           addr_buffer[23] <= ht_input_addr;
 	           key_buffer[23]  <= ht_input_key;
 	           op_buffer[23]   <= ht_input_op;
+	           buffer_status[23] <= ISSUE;
 	       end else if (buffer_status[24] == EMPTY) begin
 	           data_buffer[24] <= ht_input_data;
 	           addr_buffer[24] <= ht_input_addr;
 	           key_buffer[24]  <= ht_input_key;
 	           op_buffer[24]   <= ht_input_op;
+	           buffer_status[24] <= ISSUE;
 	       end else if (buffer_status[25] == EMPTY) begin
 	           data_buffer[25] <= ht_input_data;
 	           addr_buffer[25] <= ht_input_addr;
 	           key_buffer[25]  <= ht_input_key;
 	           op_buffer[25]   <= ht_input_op;
+	           buffer_status[25] <= ISSUE;
 	       end else if (buffer_status[26] == EMPTY) begin
 	           data_buffer[26] <= ht_input_data;
 	           addr_buffer[26] <= ht_input_addr;
 	           key_buffer[26]  <= ht_input_key;
 	           op_buffer[26]   <= ht_input_op;
+	           buffer_status[26] <= ISSUE;
 	       end else if (buffer_status[27] == EMPTY) begin
 	           data_buffer[27] <= ht_input_data;
 	           addr_buffer[27] <= ht_input_addr;
 	           key_buffer[27]  <= ht_input_key;
 	           op_buffer[27]   <= ht_input_op;
+	           buffer_status[27] <= ISSUE;
 	       end else if (buffer_status[28] == EMPTY) begin
 	           data_buffer[28] <= ht_input_data;
 	           addr_buffer[28] <= ht_input_addr;
 	           key_buffer[28]  <= ht_input_key;
 	           op_buffer[28]   <= ht_input_op;
+	           buffer_status[28] <= ISSUE;
 	       end else if (buffer_status[29] == EMPTY) begin
 	           data_buffer[29] <= ht_input_data;
 	           addr_buffer[29] <= ht_input_addr;
 	           key_buffer[29]  <= ht_input_key;
 	           op_buffer[29]   <= ht_input_op;
+	           buffer_status[29] <= ISSUE;
 	       end else if (buffer_status[30] == EMPTY) begin
 	           data_buffer[30] <= ht_input_data;
 	           addr_buffer[30] <= ht_input_addr;
 	           key_buffer[30]  <= ht_input_key;
 	           op_buffer[30]   <= ht_input_op;
+	           buffer_status[30] <= ISSUE;
 	       end else if (buffer_status[31] == EMPTY) begin
 	           data_buffer[31] <= ht_input_data;
 	           addr_buffer[31] <= ht_input_addr;
 	           key_buffer[31]  <= ht_input_key;
 	           op_buffer[31]   <= ht_input_op;
+	           buffer_status[31] <= ISSUE;
 	       end
-	   end
-	end
+	   end  // if (ht_input_valid == 1)
 	
 	// issue operations
-	always @(posedge M_AXI_ACLK) begin
-	   if (M_AXI_ARESETN == 0)
-			;
-	   else begin
 	   ht_init_wr <= 0;
        // FIXME: structural hazard
 	   //if (writes_done == 1) begin  // can issue write
@@ -1073,13 +1133,19 @@
 	               ht_rd_addr <= addr_buffer[i] << 4;
 	               ht_wr_op <= op_buffer[i];
 	               locks[addr_buffer[i] >> clogb2(NUM_LOCKS)] <= 1;
-	               curr_i_wr <= i;
 	               buffer_status[i] <= EXEC_WR;
 	               ht_init_wr <= 1;
+               end else if ((buffer_status[i] == ISSUE) && (op_buffer[i] == READ_OP)) begin  // just reading, so no need for locks
+	               // ht_rd_data <= data_buffer[i];
+	               ht_rd_addr <= addr_buffer[i] << 4;
+	               ht_rd_key <= key_buffer[i];
+	               ht_wr_op <= op_buffer[i];
+	               buffer_status[i] <= EXEC_RD;
 	           end
 	       end
-	   //end
 
+
+    /*
 	   ht_init_rd <= 0;
        // FIXME: structural hazard
 	   //if (reads_done == 1) begin  // can issue read
@@ -1094,14 +1160,9 @@
 	           end
 	       end
 	   //end
-	   end
-	end
+    */
 	
 	// read from memory
-	always @(posedge M_AXI_ACLK) begin
-	   if (M_AXI_ARESETN == 0)
-			;
-	   else begin
 	    if (M_AXI_RVALID && axi_rready) begin
 	       for (i = 0; i < BUFFER_SIZE; i = i + 1) begin
 	           if (buffer_status[i] == EXEC_RD) begin
@@ -1121,15 +1182,9 @@
 	           end
 	       end
 	    end
-	   end
-	end
 	
 	// output buffer
-    always @(posedge M_AXI_ACLK) begin
         ht_output_valid <= 0;
-	   if (M_AXI_ARESETN == 0)
-			;
-	   else begin
         if (ht_output_ready) begin
             for (i = 0; i < BUFFER_SIZE; i = i + 1) begin
                 if (buffer_status[i] == RET_RD) begin
@@ -1150,8 +1205,9 @@
 	            end
             end
 	    end
-	   end
-	end
+	    
+	end  // reset
+	end  // always
 
 	// User logic ends
 
