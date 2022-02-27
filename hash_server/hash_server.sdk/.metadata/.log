@@ -13220,3 +13220,49 @@ Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-48
 
 !ENTRY com.xilinx.sdk.utils 1 0 2022-02-26 17:32:03.424
 !MESSAGE Executed Webtalk command
+!SESSION 2022-02-26 18:29:12.361 -----------------------------------------------
+eclipse.buildId=2018.3
+java.version=1.8.0_112
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:/Users/jiangja5/hash_server/hash_server.sdk
+
+!ENTRY org.eclipse.ui 2 0 2022-02-26 18:29:14.645
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2022-02-26 18:29:14.645
+!MESSAGE Commands should really have a category: plug-in='com.xilinx.sdk.appwiz', id='com.xilinx.sdk.app.commands.ChangeAtfBuiltReferences', categoryId='com.xilinx.sdk.app.commands.category'
+
+!ENTRY org.eclipse.ui 2 0 2022-02-26 18:29:15.253
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2022-02-26 18:29:15.253
+!MESSAGE Commands should really have a category: plug-in='com.xilinx.sdk.appwiz', id='com.xilinx.sdk.app.commands.ChangeAtfBuiltReferences', categoryId='com.xilinx.sdk.app.commands.category'
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-02-26 18:29:21.563
+!MESSAGE XSCT Command: [::hsi::utils::init_repo], Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-02-26 18:29:21.563
+!MESSAGE XSCT Command: [set sdk::sdk_chan tcfchan#0], Thread: Thread-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-02-26 18:29:21.809
+!MESSAGE XSCT command with result: [::hsi::utils::init_repo], Result: [null, ]. Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-02-26 18:29:21.810
+!MESSAGE XSCT command with result: [set sdk::sdk_chan tcfchan#0], Result: [null, tcfchan#0]. Thread: Thread-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-02-26 18:29:21.811
+!MESSAGE XSCT Command: [setws C:/Users/jiangja5/hash_server/hash_server.sdk], Thread: Thread-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-02-26 18:29:21.813
+!MESSAGE XSCT command with result: [setws C:/Users/jiangja5/hash_server/hash_server.sdk], Result: [null, ]. Thread: Thread-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-02-26 18:29:21.829
+!MESSAGE XSCT Command: [::hsi::utils::openhw C:/Users/jiangja5/hash_server/hash_server.sdk/design_1_wrapper_hw_platform_1/system.hdf], Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-02-26 18:29:23.435
+!MESSAGE XSCT command with result: [::hsi::utils::openhw C:/Users/jiangja5/hash_server/hash_server.sdk/design_1_wrapper_hw_platform_1/system.hdf], Result: [null, ]. Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-02-26 18:29:23.438
+!MESSAGE XSCT Command: [::hsi::utils::openhw C:/Users/jiangja5/hash_server/hash_server.sdk/design_1_wrapper_hw_platform_0/system.hdf], Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-02-26 18:29:23.626
+!MESSAGE XSCT command with result: [::hsi::utils::openhw C:/Users/jiangja5/hash_server/hash_server.sdk/design_1_wrapper_hw_platform_0/system.hdf], Result: [null, ]. Thread: Worker-1

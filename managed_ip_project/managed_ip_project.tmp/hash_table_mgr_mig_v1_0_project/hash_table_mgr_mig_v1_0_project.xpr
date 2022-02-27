@@ -6,7 +6,7 @@
 <Project Version="7" Minor="56" Path="e:/documents/ece532-labs/project/managed_ip_project/managed_ip_project.tmp/hash_table_mgr_mig_v1_0_project/hash_table_mgr_mig_v1_0_project.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="e040aeeb291e40db96ae790c83f2e0bc"/>
+    <Option Name="Id" Val="8024dfa814484d6cab2c2a231fece4bf"/>
     <Option Name="Part" Val="xc7a100tcsg324-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
@@ -43,6 +43,7 @@
     <Option Name="SimulatorGccVersionRiviera" Val="6.2.0"/>
     <Option Name="SimulatorGccVersionActiveHdl" Val="6.2.0"/>
     <Option Name="BoardPart" Val=""/>
+    <Option Name="BoardPartRepoPaths" Val="$PPRDIR/../../../../../../Documents/board_files"/>
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="ProjectType" Val="Default"/>

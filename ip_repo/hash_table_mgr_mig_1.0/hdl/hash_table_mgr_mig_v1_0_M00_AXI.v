@@ -866,8 +866,6 @@
 	reg [HASH_TABLE_OP_WIDTH-1:0]   op_buffer   [0:BUFFER_SIZE-1];
 	reg [2:0]                       buffer_status [0:BUFFER_SIZE-1];
 	
-	reg [clogb2(BUFFER_SIZE)-1:0] buffer_free;
-	
 	reg [clogb2(BUFFER_SIZE)-1:0] curr_i_rd;
 	reg [clogb2(BUFFER_SIZE)-1:0] curr_i_wr;
 	
@@ -891,21 +889,171 @@
                //op_buffer[i] <= 0;
 	           buffer_status[i] <= EMPTY;
 	       end
-           buffer_free <= 0;
            for (i = 0; i < NUM_LOCKS; i = i + 1) begin
                locks[i] <= 0;
            end
 	   end else if (ht_input_valid == 1) begin
-	       data_buffer[buffer_free] <= ht_input_data;
-	       addr_buffer[buffer_free] <= ht_input_addr;
-	       key_buffer[buffer_free]  <= ht_input_key;
-	       op_buffer[buffer_free]   <= ht_input_op;
-	       buffer_status[buffer_free] <= ISSUE;
-
-	       for (i = 0; i < BUFFER_SIZE; i = i + 1) begin
-	           if (buffer_status[i] == EMPTY) begin
-	               buffer_free <= i;
-	           end
+	       // fix multiply-driven net...
+	       if (buffer_status[0] == EMPTY) begin
+	           data_buffer[0] <= ht_input_data;
+	           addr_buffer[0] <= ht_input_addr;
+	           key_buffer[0]  <= ht_input_key;
+	           op_buffer[0]   <= ht_input_op;
+	       end else if (buffer_status[1] == EMPTY) begin
+	           data_buffer[1] <= ht_input_data;
+	           addr_buffer[1] <= ht_input_addr;
+	           key_buffer[1]  <= ht_input_key;
+	           op_buffer[1]   <= ht_input_op;
+	       end else if (buffer_status[2] == EMPTY) begin
+	           data_buffer[2] <= ht_input_data;
+	           addr_buffer[2] <= ht_input_addr;
+	           key_buffer[2]  <= ht_input_key;
+	           op_buffer[2]   <= ht_input_op;
+	       end else if (buffer_status[3] == EMPTY) begin
+	           data_buffer[3] <= ht_input_data;
+	           addr_buffer[3] <= ht_input_addr;
+	           key_buffer[3]  <= ht_input_key;
+	           op_buffer[3]   <= ht_input_op;
+	       end else if (buffer_status[4] == EMPTY) begin
+	           data_buffer[4] <= ht_input_data;
+	           addr_buffer[4] <= ht_input_addr;
+	           key_buffer[4]  <= ht_input_key;
+	           op_buffer[4]   <= ht_input_op;
+	       end else if (buffer_status[5] == EMPTY) begin
+	           data_buffer[5] <= ht_input_data;
+	           addr_buffer[5] <= ht_input_addr;
+	           key_buffer[5]  <= ht_input_key;
+	           op_buffer[5]   <= ht_input_op;
+	       end else if (buffer_status[6] == EMPTY) begin
+	           data_buffer[6] <= ht_input_data;
+	           addr_buffer[6] <= ht_input_addr;
+	           key_buffer[6]  <= ht_input_key;
+	           op_buffer[6]   <= ht_input_op;
+	       end else if (buffer_status[7] == EMPTY) begin
+	           data_buffer[7] <= ht_input_data;
+	           addr_buffer[7] <= ht_input_addr;
+	           key_buffer[7]  <= ht_input_key;
+	           op_buffer[7]   <= ht_input_op;
+	       end else if (buffer_status[8] == EMPTY) begin
+	           data_buffer[8] <= ht_input_data;
+	           addr_buffer[8] <= ht_input_addr;
+	           key_buffer[8]  <= ht_input_key;
+	           op_buffer[8]   <= ht_input_op;
+	       end else if (buffer_status[9] == EMPTY) begin
+	           data_buffer[9] <= ht_input_data;
+	           addr_buffer[9] <= ht_input_addr;
+	           key_buffer[9]  <= ht_input_key;
+	           op_buffer[9]   <= ht_input_op;
+	       end else if (buffer_status[10] == EMPTY) begin
+	           data_buffer[10] <= ht_input_data;
+	           addr_buffer[10] <= ht_input_addr;
+	           key_buffer[10]  <= ht_input_key;
+	           op_buffer[10]   <= ht_input_op;
+	       end else if (buffer_status[11] == EMPTY) begin
+	           data_buffer[11] <= ht_input_data;
+	           addr_buffer[11] <= ht_input_addr;
+	           key_buffer[11]  <= ht_input_key;
+	           op_buffer[11]   <= ht_input_op;
+	       end else if (buffer_status[12] == EMPTY) begin
+	           data_buffer[12] <= ht_input_data;
+	           addr_buffer[12] <= ht_input_addr;
+	           key_buffer[12]  <= ht_input_key;
+	           op_buffer[12]   <= ht_input_op;
+	       end else if (buffer_status[13] == EMPTY) begin
+	           data_buffer[13] <= ht_input_data;
+	           addr_buffer[13] <= ht_input_addr;
+	           key_buffer[13]  <= ht_input_key;
+	           op_buffer[13]   <= ht_input_op;
+	       end else if (buffer_status[14] == EMPTY) begin
+	           data_buffer[14] <= ht_input_data;
+	           addr_buffer[14] <= ht_input_addr;
+	           key_buffer[14]  <= ht_input_key;
+	           op_buffer[14]   <= ht_input_op;
+	       end else if (buffer_status[15] == EMPTY) begin
+	           data_buffer[15] <= ht_input_data;
+	           addr_buffer[15] <= ht_input_addr;
+	           key_buffer[15]  <= ht_input_key;
+	           op_buffer[15]   <= ht_input_op;
+	       end else if (buffer_status[16] == EMPTY) begin
+	           data_buffer[16] <= ht_input_data;
+	           addr_buffer[16] <= ht_input_addr;
+	           key_buffer[16]  <= ht_input_key;
+	           op_buffer[16]   <= ht_input_op;
+	       end else if (buffer_status[17] == EMPTY) begin
+	           data_buffer[17] <= ht_input_data;
+	           addr_buffer[17] <= ht_input_addr;
+	           key_buffer[17]  <= ht_input_key;
+	           op_buffer[17]   <= ht_input_op;
+	       end else if (buffer_status[18] == EMPTY) begin
+	           data_buffer[18] <= ht_input_data;
+	           addr_buffer[18] <= ht_input_addr;
+	           key_buffer[18]  <= ht_input_key;
+	           op_buffer[18]   <= ht_input_op;
+	       end else if (buffer_status[19] == EMPTY) begin
+	           data_buffer[19] <= ht_input_data;
+	           addr_buffer[19] <= ht_input_addr;
+	           key_buffer[19]  <= ht_input_key;
+	           op_buffer[19]   <= ht_input_op;
+	       end else if (buffer_status[20] == EMPTY) begin
+	           data_buffer[20] <= ht_input_data;
+	           addr_buffer[20] <= ht_input_addr;
+	           key_buffer[20]  <= ht_input_key;
+	           op_buffer[20]   <= ht_input_op;
+	       end else if (buffer_status[21] == EMPTY) begin
+	           data_buffer[21] <= ht_input_data;
+	           addr_buffer[21] <= ht_input_addr;
+	           key_buffer[21]  <= ht_input_key;
+	           op_buffer[21]   <= ht_input_op;
+	       end else if (buffer_status[22] == EMPTY) begin
+	           data_buffer[22] <= ht_input_data;
+	           addr_buffer[22] <= ht_input_addr;
+	           key_buffer[22]  <= ht_input_key;
+	           op_buffer[22]   <= ht_input_op;
+	       end else if (buffer_status[23] == EMPTY) begin
+	           data_buffer[23] <= ht_input_data;
+	           addr_buffer[23] <= ht_input_addr;
+	           key_buffer[23]  <= ht_input_key;
+	           op_buffer[23]   <= ht_input_op;
+	       end else if (buffer_status[24] == EMPTY) begin
+	           data_buffer[24] <= ht_input_data;
+	           addr_buffer[24] <= ht_input_addr;
+	           key_buffer[24]  <= ht_input_key;
+	           op_buffer[24]   <= ht_input_op;
+	       end else if (buffer_status[25] == EMPTY) begin
+	           data_buffer[25] <= ht_input_data;
+	           addr_buffer[25] <= ht_input_addr;
+	           key_buffer[25]  <= ht_input_key;
+	           op_buffer[25]   <= ht_input_op;
+	       end else if (buffer_status[26] == EMPTY) begin
+	           data_buffer[26] <= ht_input_data;
+	           addr_buffer[26] <= ht_input_addr;
+	           key_buffer[26]  <= ht_input_key;
+	           op_buffer[26]   <= ht_input_op;
+	       end else if (buffer_status[27] == EMPTY) begin
+	           data_buffer[27] <= ht_input_data;
+	           addr_buffer[27] <= ht_input_addr;
+	           key_buffer[27]  <= ht_input_key;
+	           op_buffer[27]   <= ht_input_op;
+	       end else if (buffer_status[28] == EMPTY) begin
+	           data_buffer[28] <= ht_input_data;
+	           addr_buffer[28] <= ht_input_addr;
+	           key_buffer[28]  <= ht_input_key;
+	           op_buffer[28]   <= ht_input_op;
+	       end else if (buffer_status[29] == EMPTY) begin
+	           data_buffer[29] <= ht_input_data;
+	           addr_buffer[29] <= ht_input_addr;
+	           key_buffer[29]  <= ht_input_key;
+	           op_buffer[29]   <= ht_input_op;
+	       end else if (buffer_status[30] == EMPTY) begin
+	           data_buffer[30] <= ht_input_data;
+	           addr_buffer[30] <= ht_input_addr;
+	           key_buffer[30]  <= ht_input_key;
+	           op_buffer[30]   <= ht_input_op;
+	       end else if (buffer_status[31] == EMPTY) begin
+	           data_buffer[31] <= ht_input_data;
+	           addr_buffer[31] <= ht_input_addr;
+	           key_buffer[31]  <= ht_input_key;
+	           op_buffer[31]   <= ht_input_op;
 	       end
 	   end
 	end
