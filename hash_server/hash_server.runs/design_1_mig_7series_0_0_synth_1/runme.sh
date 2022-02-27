@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/jiangja5/hash_server/hash_server.runs/design_1_mig_7series_0_0_synth_1'
+HD_PWD='W:/ECE532/project/hash_server/hash_server.runs/design_1_mig_7series_0_0_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

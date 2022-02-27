@@ -400,7 +400,7 @@
 	  // transaction
 	  always @(posedge M_AXI_ACLK)
 	  begin
-	    if (M_AXI_ARESETN == 0 || ht_init_rd || ht_init_wr)
+	    if (M_AXI_ARESETN == 0 || ht_init_wr || ht_init_rd)
 	      begin
 	        axi_arvalid <= 1'b0;
 	      end
@@ -1127,7 +1127,7 @@
        // FIXME: structural hazard
 	   //if (writes_done == 1) begin  // can issue write
 	       for (i = 0; i < BUFFER_SIZE; i = i + 1) begin
-	           if ((buffer_status[i] == ISSUE) && (op_buffer[i] != READ_OP) && (locks[addr_buffer[i][clogb2(NUM_LOCKS)-1:0]] == 0)) begin
+	           if ((buffer_status[i] == ISSUE) && (op_buffer[i] != READ_OP) && (locks[addr_buffer[i] >> clogb2(NUM_LOCKS)] == 0)) begin
 	               ht_wr_data <= {data_buffer[i], key_buffer[i]};
 	               ht_wr_addr <= addr_buffer[i] << 4;
 	               ht_rd_addr <= addr_buffer[i] << 4;
@@ -1141,6 +1141,8 @@
 	               ht_rd_key <= key_buffer[i];
 	               ht_wr_op <= op_buffer[i];
 	               buffer_status[i] <= EXEC_RD;
+	               ht_init_wr <= 1;
+	               ht_init_rd <= 1;
 	           end
 	       end
 

@@ -131,7 +131,7 @@ int main()
 #endif
 	/* the mac address of the board. this should be unique per board */
 	unsigned char mac_ethernet_address[] =
-	{ 0x00, 0x0a, 0x35, 0x00, 0x00, 0x11 };
+	{ 0x00, 0x0a, 0x35, 0x00, 0x01, 0x02 };
 
 	echo_netif = &server_netif;
 #if defined (__arm__) && !defined (ARMR5)
@@ -157,11 +157,10 @@ int main()
 	gw.addr = 0;
 	netmask.addr = 0;
 #else
-
 	/* initliaze IP addresses to be used */
-	IP4_ADDR(&ipaddr,  1, 1,   11, 2);
-	IP4_ADDR(&netmask, 255, 255, 0,  0);
-	IP4_ADDR(&gw,      1, 1,   11,  0);
+	IP4_ADDR(&ipaddr,  192, 168,   1, 10);
+	IP4_ADDR(&netmask, 255, 255, 255,  0);
+	IP4_ADDR(&gw,      192, 168,   1,  1);
 #endif
 #endif
 	print_app_header();
@@ -169,7 +168,6 @@ int main()
 	lwip_init();
 
 #if (LWIP_IPV6 == 0)
-	xil_printf("Here\n");
 	/* Add network interface to the netif_list, and set it as default */
 	if (!xemac_add(echo_netif, &ipaddr, &netmask,
 						&gw, mac_ethernet_address,
@@ -177,7 +175,6 @@ int main()
 		xil_printf("Error adding N/W interface\n\r");
 		return -1;
 	}
-	xil_printf("Here\n");
 #else
 	/* Add network interface to the netif_list, and set it as default */
 	if (!xemac_add(echo_netif, NULL, NULL, NULL, mac_ethernet_address,
@@ -216,10 +213,10 @@ int main()
 	if (dhcp_timoutcntr <= 0) {
 		if ((echo_netif->ip_addr.addr) == 0) {
 			xil_printf("DHCP Timeout\r\n");
-			xil_printf("Configuring default IP of 1.1.11.2\r\n");
-			IP4_ADDR(&(echo_netif->ip_addr),  1, 1,   11, 2);
-			IP4_ADDR(&(echo_netif->netmask), 255, 255, 0,  0);
-			IP4_ADDR(&(echo_netif->gw),      1, 1,   11,  0);
+			xil_printf("Configuring default IP of 192.168.1.10\r\n");
+			IP4_ADDR(&(echo_netif->ip_addr),  192, 168,   1, 10);
+			IP4_ADDR(&(echo_netif->netmask), 255, 255, 255,  0);
+			IP4_ADDR(&(echo_netif->gw),      192, 168,   1,  1);
 		}
 	}
 
@@ -231,8 +228,6 @@ int main()
 	print_ip_settings(&ipaddr, &netmask, &gw);
 
 #endif
-
-	xil_printf("Here\n");
 	/* start the application (web server, rxtest, txtest, etc..) */
 	start_application();
 
