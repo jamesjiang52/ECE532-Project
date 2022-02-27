@@ -131,7 +131,7 @@ int main()
 #endif
 	/* the mac address of the board. this should be unique per board */
 	unsigned char mac_ethernet_address[] =
-	{ 0x00, 0x0a, 0x35, 0x00, 0x00, 0x11 };
+	{ 0x00, 0x0a, 0x35, 0x00, 0x00, 0x7 };
 
 	echo_netif = &server_netif;
 #if defined (__arm__) && !defined (ARMR5)
@@ -157,11 +157,10 @@ int main()
 	gw.addr = 0;
 	netmask.addr = 0;
 #else
-
 	/* initliaze IP addresses to be used */
-	IP4_ADDR(&ipaddr,  1, 1,   11, 2);
+	IP4_ADDR(&ipaddr,  1, 1,   7, 2);
 	IP4_ADDR(&netmask, 255, 255, 0,  0);
-	IP4_ADDR(&gw,      1, 1,   11,  0);
+	IP4_ADDR(&gw,      1, 1,   7,  0);
 #endif
 #endif
 	print_app_header();
@@ -214,10 +213,10 @@ int main()
 	if (dhcp_timoutcntr <= 0) {
 		if ((echo_netif->ip_addr.addr) == 0) {
 			xil_printf("DHCP Timeout\r\n");
-			xil_printf("Configuring default IP of 1.1.11.2\r\n");
-			IP4_ADDR(&(echo_netif->ip_addr),  1, 1,   11, 2);
+			xil_printf("Configuring default IP of 1.1.7.2\r\n");
+			IP4_ADDR(&(echo_netif->ip_addr),  1, 1,   7, 2);
 			IP4_ADDR(&(echo_netif->netmask), 255, 255, 0,  0);
-			IP4_ADDR(&(echo_netif->gw),      1, 1,   11,  0);
+			IP4_ADDR(&(echo_netif->gw),      1, 1,   7,  0);
 		}
 	}
 
@@ -229,9 +228,9 @@ int main()
 	print_ip_settings(&ipaddr, &netmask, &gw);
 
 #endif
-
 	/* start the application (web server, rxtest, txtest, etc..) */
 	start_application();
+	*(hash_table_mgr_base + 16) = 0;
 
 	/* receive and process packets */
 	while (1) {
@@ -245,8 +244,8 @@ int main()
 		}
 		xemacif_input(echo_netif);
 
-		*(hash_table_mgr_base + 16) = 0;
-		//xil_printf("Valid: %d\n", *(hash_table_mgr_base + 16));
+		if (*(hash_table_mgr_base + 16) == 1)
+			xil_printf("Valid is: %d", *(hash_table_mgr_base + 16));
 
 	    if ((*(hash_table_mgr_base + 16) == 1) && (g_pcb != NULL)) {
 	    	char buf[43];
@@ -260,17 +259,16 @@ int main()
 
 	    	for (int i = 0; i < 8; i++)
 	    		buf[i + 35] = (char)(*(hash_table_mgr_base + 19 + i/4) >> ((i % 4)*8));
-	    	/*
-	        xil_printf("Sending response:\n\tType: %d\n\tAddress: 0x%8X%8X\n\tKey: ", buf[0], buf[1], buf[2]);
+
+	        xil_printf("Sending response:\n\tType: %d\n\tAddress: 0x%2X%2X\n\tKey: ", buf[0], buf[1], buf[2]);
 	        for (int i = 0; i < 32; i++)
 	        	xil_printf("%c", buf[i + 3]);
 	        xil_printf("\n\tData: ");
 	        for (int i = 0; i < 8; i++)
 	        	xil_printf("%c", buf[i + 35]);
 	        xil_printf("\n\n");
-			*/
-	    	while (tcp_sndbuf(g_pcb) < 43)
-	    		;
+
+	    	//while (tcp_sndbuf(g_pcb) < 43) ;
 	    	//tcp_write(g_pcb, buf, 43, 1);
 
 	    	*(hash_table_mgr_base + 16) = 0;
@@ -305,8 +303,6 @@ err_t recv_callback(void *arg, struct tcp_pcb *tpcb,
 	char *load = (char *)p->payload;
 
 	unsigned int op = (unsigned int)load[0];
-	if (op == 0 || op == 1 || op == 2 || op == 3) {  // need this for some reason
-
     unsigned int addr = (unsigned int)load[1] | ((unsigned int)load[2] << 8);
 
     unsigned int key[8] = {0};
@@ -317,7 +313,7 @@ err_t recv_callback(void *arg, struct tcp_pcb *tpcb,
     for (int i = 0; i < 8; i++)
         data[i/4] |= ((unsigned int)load[i + 35] << ((i % 4)*8));
 
-    xil_printf("Received request:\n\tOperation: %d\n\tAddress: 0x%8X%8X\n\tKey: ", load[0], load[1], load[2]);
+    xil_printf("Received request:\n\tOperation: %d\n\tAddress: 0x%2X%2X\n\tKey: ", load[0], load[1], load[2]);
     for (int i = 0; i < 32; i++)
     	xil_printf("%c", load[i + 3]);
     xil_printf("\n\tData: ");
@@ -338,7 +334,6 @@ err_t recv_callback(void *arg, struct tcp_pcb *tpcb,
     *(hash_table_mgr_base + 11) = key[6];
     *(hash_table_mgr_base + 12) = key[7];
     *(hash_table_mgr_base + 0) = 1;
-	}  // if (op == 0 || op == 1 || op == 2 || op == 3)
 
 	/* indicate that the packet has been received */
 	tcp_recved(tpcb, p->len);

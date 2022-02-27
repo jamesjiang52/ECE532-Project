@@ -1124,6 +1124,7 @@
 	
 	// issue operations
 	   ht_init_wr <= 0;
+	   ht_init_rd <= 0;
        // FIXME: structural hazard
 	   //if (writes_done == 1) begin  // can issue write
 	       for (i = 0; i < BUFFER_SIZE; i = i + 1) begin

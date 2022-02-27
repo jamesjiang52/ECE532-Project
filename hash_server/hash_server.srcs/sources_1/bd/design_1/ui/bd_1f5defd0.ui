@@ -27,17 +27,17 @@ preplace inst microblaze_0_local_memory -pg 1 -lvl 5 -y 830 -defaultsOSRD
 preplace inst hash_table_mgr_mig_0 -pg 1 -lvl 4 -y 290 -defaultsOSRD
 preplace netloc hash_table_mgr_mig_0_o_ht_output_valid 1 4 2 1530J 580 2020
 preplace netloc mig_7series_0_mmcm_locked 1 3 5 1010 1010 NJ 1010 NJ 1010 NJ 1010 2820
-preplace netloc microblaze_0_axi_periph_M04_AXI 1 5 1 2030
 preplace netloc axi_ethernetlite_0_MDIO 1 6 2 NJ 840 NJ
+preplace netloc microblaze_0_axi_periph_M04_AXI 1 5 1 2030
 preplace netloc mig_7series_0_DDR2 1 7 1 NJ
 preplace netloc hash_table_mgr_mig_0_o_ht_output_addr 1 4 2 1600J 590 1950
 preplace netloc microblaze_0_intr 1 2 1 640
 preplace netloc hash_table_mgr_0_o_ht_input_data 1 3 4 960 700 NJ 700 NJ 700 2450
 preplace netloc hash_table_mgr_mig_0_o_ht_output_key 1 4 2 1520J 610 1980
 preplace netloc microblaze_0_Clk 1 1 6 200 730 650 680 930 430 1580 690 1990 750 2490J
+preplace netloc microblaze_0_intc_axi 1 2 4 660 460 NJ 460 1540J 560 1910
 preplace netloc microblaze_0_axi_periph_M03_AXI 1 5 1 2010
 preplace netloc microblaze_0_interrupt 1 3 1 N
-preplace netloc microblaze_0_intc_axi 1 2 4 660 460 NJ 460 1540J 560 1910
 preplace netloc microblaze_0_ilmb_1 1 4 1 N
 preplace netloc hash_table_mgr_0_o_ht_input_op 1 3 4 980 720 NJ 720 NJ 720 2430
 preplace netloc sys_clock_1 1 0 1 NJ
@@ -66,8 +66,8 @@ preplace netloc clk_wiz_1_clk_out2 1 1 6 200J 1090 NJ 1090 NJ 1090 NJ 1090 2060J
 preplace netloc microblaze_0_dlmb_1 1 4 1 N
 preplace netloc microblaze_0_axi_periph_M02_AXI 1 5 2 1930 160 2540J
 preplace netloc clk_wiz_1_clk_out3 1 1 7 200J 1110 NJ 1110 950J 1070 NJ 1070 NJ 1070 2540 1030 2850J
-preplace netloc axi_ethernetlite_0_MII 1 6 1 2490
 preplace netloc microblaze_0_debug 1 3 1 920
+preplace netloc axi_ethernetlite_0_MII 1 6 1 2490
 preplace netloc reset_1 1 0 7 10 1000 220 1050 640J 940 NJ 940 NJ 940 NJ 940 2500
 preplace netloc mdm_1_debug_sys_rst 1 1 3 240 660 NJ 660 900
 preplace netloc axi_timer_0_interrupt 1 1 6 230 1100 NJ 1100 NJ 1100 NJ 1100 NJ 1100 2470
