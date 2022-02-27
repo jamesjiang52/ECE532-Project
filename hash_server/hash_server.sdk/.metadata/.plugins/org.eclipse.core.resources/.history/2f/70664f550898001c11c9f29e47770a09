@@ -257,7 +257,7 @@ int main()
 	    	for (int i = 0; i < 8; i++)
 	    		buf[i + 35] = (char)(*(hash_table_mgr_base + 19 + i/4) >> ((i % 4)*8));
 
-	        xil_printf("Sending response:\n\tType: %d\n\tAddress: 0x%2X%2X\n\tKey: ", buf[0], buf[1] & 0xFF, buf[2] & 0xFF);
+	        xil_printf("Sending response:\n\tType: %d\n\tAddress: 0x%2X%2X\n\tKey: ", buf[0], buf[1], buf[2]);
 	        for (int i = 0; i < 32; i++)
 	        	xil_printf("%c", buf[i + 3]);
 	        xil_printf("\n\tData: ");

@@ -1136,11 +1136,12 @@
 	               locks[addr_buffer[i] >> clogb2(NUM_LOCKS)] <= 1;
 	               buffer_status[i] <= EXEC_WR;
 	               ht_init_wr <= 1;
-               end else if ((buffer_status[i] == ISSUE) && (op_buffer[i] == READ_OP)) begin  // just reading, so no need for locks
+               end else if ((buffer_status[i] == ISSUE) && (op_buffer[i] == READ_OP) && (locks[addr_buffer[i] >> clogb2(NUM_LOCKS)] == 0)) begin  // just reading, so no need for locks
 	               // ht_rd_data <= data_buffer[i];
 	               ht_rd_addr <= addr_buffer[i] << 4;
 	               ht_rd_key <= key_buffer[i];
 	               ht_wr_op <= op_buffer[i];
+	               locks[addr_buffer[i] >> clogb2(NUM_LOCKS)] <= 1;
 	               buffer_status[i] <= EXEC_RD;
 	               ht_init_wr <= 1;
 	               ht_init_rd <= 1;
@@ -1194,6 +1195,7 @@
                     ht_output_data <= data_buffer[i];
                     ht_output_addr <= addr_buffer[i];
                     ht_output_key  <= key_buffer[i];
+	                locks[addr_buffer[i] >> clogb2(NUM_LOCKS)] <= 0;
                     ht_output_type <= DATA_OUT;
                     ht_output_valid <= 1;
                     buffer_status[i] <= EMPTY;

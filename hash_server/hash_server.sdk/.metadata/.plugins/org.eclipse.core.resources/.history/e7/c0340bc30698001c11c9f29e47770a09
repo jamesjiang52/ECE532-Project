@@ -248,8 +248,9 @@ int main()
 	    	char buf[43];
 
 	    	buf[0] = (char)(*(hash_table_mgr_base + 18));
-	    	buf[1] = (char)(*(hash_table_mgr_base + 17) & 0xFF);
-	    	buf[2] = (char)((*(hash_table_mgr_base + 17) >> 8) & 0xFF);
+	    	buf[1] = (char)(*(hash_table_mgr_base + 17));
+	    	buf[2] = (char)(*(hash_table_mgr_base + 17) >> 8);
+	    	xil_printf("Addr: %b", *(hash_table_mgr_base + 17));
 
 	    	for (int i = 0; i < 32; i++)
 	    		buf[i + 3] = (char)(*(hash_table_mgr_base + 21 + i/4) >> ((i % 4)*8));
@@ -257,7 +258,7 @@ int main()
 	    	for (int i = 0; i < 8; i++)
 	    		buf[i + 35] = (char)(*(hash_table_mgr_base + 19 + i/4) >> ((i % 4)*8));
 
-	        xil_printf("Sending response:\n\tType: %d\n\tAddress: 0x%2X%2X\n\tKey: ", buf[0], buf[1] & 0xFF, buf[2] & 0xFF);
+	        xil_printf("Sending response:\n\tType: %d\n\tAddress: 0x%2X%2X\n\tKey: ", buf[0], buf[1], buf[2]);
 	        for (int i = 0; i < 32; i++)
 	        	xil_printf("%c", buf[i + 3]);
 	        xil_printf("\n\tData: ");
@@ -302,7 +303,7 @@ err_t recv_callback(void *arg, struct tcp_pcb *tpcb,
 	unsigned int op = (unsigned int)load[0];
 	if (op == 0 || op == 1 || op == 2 || op == 3) {
 
-    unsigned int addr = ((unsigned int)load[1] & 0xFF) | (((unsigned int)load[2] << 8) & 0xFF00);
+    unsigned int addr = (unsigned int)load[1] | ((unsigned int)load[2] << 8);
 
     unsigned int key[8] = {0};
     for (int i = 0; i < 32; i++)
@@ -312,7 +313,7 @@ err_t recv_callback(void *arg, struct tcp_pcb *tpcb,
     for (int i = 0; i < 8; i++)
         data[i/4] |= ((unsigned int)load[i + 35] << ((i % 4)*8));
 
-    xil_printf("Received request:\n\tOperation: %d\n\tAddress: 0x%2X%2X\n\tKey: ", load[0], load[1] & 0xFF, load[2] & 0xFF);
+    xil_printf("Received request:\n\tOperation: %d\n\tAddress: 0x%2X%2X\n\tKey: ", load[0], load[1], load[2]);
     for (int i = 0; i < 32; i++)
     	xil_printf("%c", load[i + 3]);
     xil_printf("\n\tData: ");

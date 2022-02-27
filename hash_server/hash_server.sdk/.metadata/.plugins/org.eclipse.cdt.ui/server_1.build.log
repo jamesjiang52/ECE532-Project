@@ -1,6 +1,21 @@
-13:07:04 **** Incremental Build of configuration Debug for project server_1 ****
+15:32:45 **** Auto Build of configuration Debug for project server_1 ****
 make all 
-make: Nothing to be done for 'all'.
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../server_1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: server_1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../server_1_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "server_1.elf"  ./src/echo.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: server_1.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size server_1.elf  |tee "server_1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 111436	   1436	3962328	4075200	 3e2ec0	server_1.elf
+'Finished building: server_1.elf.size'
+' '
 
-13:07:05 Build Finished (took 220ms)
+15:32:46 Build Finished (took 1s.156ms)
 

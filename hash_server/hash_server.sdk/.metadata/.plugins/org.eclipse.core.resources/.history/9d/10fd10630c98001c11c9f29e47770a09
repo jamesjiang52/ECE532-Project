@@ -42,6 +42,7 @@
 #include "lwip/err.h"
 #include "lwip/tcp.h"
 #include "xil_cache.h"
+#include "sys/timer.h"
 
 #if LWIP_IPV6==1
 #include "lwip/ip.h"
