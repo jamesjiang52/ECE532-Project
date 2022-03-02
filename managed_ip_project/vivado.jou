@@ -1,0 +1,32 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Tue Mar  1 17:23:23 2022
+# Process ID: 7280
+# Current directory: E:/Documents/ECE532-Labs/project/managed_ip_project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6092 E:\Documents\ECE532-Labs\project\managed_ip_project\managed_ip_project.xpr
+# Log file: E:/Documents/ECE532-Labs/project/managed_ip_project/vivado.log
+# Journal file: E:/Documents/ECE532-Labs/project/managed_ip_project\vivado.jou
+# Running On: DESKTOP-4PP3T4A, OS: Windows, CPU Frequency: 3693 MHz, CPU Physical cores: 16, Host memory: 17103 MB
+#-----------------------------------------------------------
+start_gui
+open_project E:/Documents/ECE532-Labs/project/managed_ip_project/managed_ip_project.xpr
+ipx::edit_ip_in_project -upgrade true -name hash_table_mgr_mig_v1_0_project -directory E:/Documents/ECE532-Labs/project/managed_ip_project/managed_ip_project.tmp/hash_table_mgr_mig_v1_0_project e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0/component.xml
+update_compile_order -fileset sources_1
+set_property core_revision 53 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::merge_project_changes files [ipx::current_core]
+set_property core_revision 54 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0

@@ -131,7 +131,7 @@ int main()
 #endif
 	/* the mac address of the board. this should be unique per board */
 	unsigned char mac_ethernet_address[] =
-	{ 0x00, 0x0a, 0x35, 0x00, 0x00, 0x7 };
+	{ 0x00, 0x0a, 0x35, 0x00, 0x00, 0x11 };
 
 	echo_netif = &server_netif;
 #if defined (__arm__) && !defined (ARMR5)
@@ -158,9 +158,9 @@ int main()
 	netmask.addr = 0;
 #else
 	/* initliaze IP addresses to be used */
-	IP4_ADDR(&ipaddr,  1, 1,   7, 2);
+	IP4_ADDR(&ipaddr,  1, 1,   11, 2);
 	IP4_ADDR(&netmask, 255, 255, 0,  0);
-	IP4_ADDR(&gw,      1, 1,   7,  0);
+	IP4_ADDR(&gw,      1, 1,   11,  0);
 #endif
 #endif
 	print_app_header();
@@ -213,10 +213,10 @@ int main()
 	if (dhcp_timoutcntr <= 0) {
 		if ((echo_netif->ip_addr.addr) == 0) {
 			xil_printf("DHCP Timeout\r\n");
-			xil_printf("Configuring default IP of 1.1.7.2\r\n");
-			IP4_ADDR(&(echo_netif->ip_addr),  1, 1,   7, 2);
+			xil_printf("Configuring default IP of 1.1.11.2\r\n");
+			IP4_ADDR(&(echo_netif->ip_addr),  1, 1,   11, 2);
 			IP4_ADDR(&(echo_netif->netmask), 255, 255, 0,  0);
-			IP4_ADDR(&(echo_netif->gw),      1, 1,   7,  0);
+			IP4_ADDR(&(echo_netif->gw),      1, 1,   11,  0);
 		}
 	}
 
@@ -306,11 +306,11 @@ err_t recv_callback(void *arg, struct tcp_pcb *tpcb,
 
     unsigned int key[8] = {0};
     for (int i = 0; i < 32; i++)
-        key[i/4] |= ((unsigned int)load[i + 3] << ((i % 4)*8));
+        key[i/4] |= (((unsigned int)load[i + 3] & 0xFF) << ((i % 4)*8));
 
     unsigned int data[2] = {0};
     for (int i = 0; i < 8; i++)
-        data[i/4] |= ((unsigned int)load[i + 35] << ((i % 4)*8));
+        data[i/4] |= (((unsigned int)load[i + 35] & 0xFF) << ((i % 4)*8));
 
     xil_printf("Received request:\n\tOperation: %d\n\tAddress: 0x%2X%2X\n\tKey: ", load[0], load[1] & 0xFF, load[2] & 0xFF);
     for (int i = 0; i < 32; i++)

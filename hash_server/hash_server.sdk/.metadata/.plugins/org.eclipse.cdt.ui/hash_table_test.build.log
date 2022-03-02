@@ -1,0 +1,21 @@
+18:44:12 **** Auto Build of configuration Debug for project hash_table_test ****
+make all 
+'Building file: ../src/test.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/test.o" -I../../hash_table_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/test.d" -MT"src/test.o" -o "src/test.o" "../src/test.c"
+'Finished building: ../src/test.c'
+' '
+'Building target: hash_table_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hash_table_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hash_table_test.elf"  ./src/platform.o ./src/test.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hash_table_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hash_table_test.elf  |tee "hash_table_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3280	    324	   3108	   6712	   1a38	hash_table_test.elf
+'Finished building: hash_table_test.elf.size'
+' '
+
+18:44:13 Build Finished (took 998ms)
+
