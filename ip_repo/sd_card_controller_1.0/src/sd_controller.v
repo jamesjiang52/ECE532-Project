@@ -66,10 +66,10 @@ module sd_controller(
     reg [4:0] return_state;
     reg sclk_sig = 0;
     reg [55:0] cmd_out;
-    (* mark_debug = "true" *) reg [7:0] recv_data;
+    reg [7:0] recv_data;
     reg cmd_mode = 1;
     reg [7:0] data_sig = 8'hFF;
-    (* mark_debug = "true" *) reg [7:0] version = 0;
+    reg [7:0] version = 0;
     
     reg [9:0] byte_counter;
     reg [9:0] bit_counter;

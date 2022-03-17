@@ -97,22 +97,22 @@
     assign spiMiso = SD_DAT[0];
     assign SD_DAT[1] = 1;
     
-    (* mark_debug = "true" *) reg rd = 0;
-    (* mark_debug = "true" *) reg wr = 0;
+    reg rd = 0;
+    reg wr = 0;
     reg [7:0] din = 0;
-    (* mark_debug = "true" *) wire [7:0] dout;
-    (* mark_debug = "true" *) wire byte_available;
-    (* mark_debug = "true" *) wire ready;
-    (* mark_debug = "true" *) wire ready_for_next_byte;
-    (* mark_debug = "true" *) reg [31:0] address;
+    wire [7:0] dout;
+    wire byte_available;
+    wire ready;
+    wire ready_for_next_byte;
+    reg [31:0] address;
     
-    (* mark_debug = "true" *) wire [4:0] state;
+    wire [4:0] state;
     
-    (* mark_debug = "true" *) reg [31:0] addr_ptr = 0;  
+    reg [31:0] addr_ptr = 0;  
     reg byte_available_1;
-    (* mark_debug = "true" *) reg [1:0] counter = 0;
-    (* mark_debug = "true" *) reg [31:0] data;
-    (* mark_debug = "true" *) reg signal = 0;
+    reg [1:0] counter = 0;
+    reg [31:0] data;
+    reg signal = 0;
     reg signal_1 = 0;
 
     assign loaded = (addr_ptr >= SD_DATA_SIZE);

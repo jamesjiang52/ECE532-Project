@@ -153,7 +153,7 @@
 	//Asserts when a single beat read transaction is issued and remains asserted till the completion of read trasaction.
 	reg  	read_issued;
 	//flag that marks the completion of write trasactions. The number of write transaction is user selected by the parameter C_M_TRANSACTIONS_NUM.
-	(* mark_debug = "true" *) reg  	writes_done;
+	reg  	writes_done;
 	//flag that marks the completion of read trasactions. The number of read transaction is user selected by the parameter C_M_TRANSACTIONS_NUM
 	reg  	reads_done;
 	//The error register is asserted when any of the write response error, read response error or the data mismatch flags are asserted.
