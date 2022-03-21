@@ -1,0 +1,22 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../edit_spam_detection_inference_v1_0.ip_user_files/ipstatic/simulation/fifo_generator_vlog_beh.v" \
+"../../../../edit_spam_detection_inference_v1_0.ip_user_files/ipstatic/hdl/fifo_generator_v13_2_rfs.v" \
+"../../../../spam_detection_inference_1.0/src/fifo_generator_0/sim/fifo_generator_0.v" \
+"../../../../spam_detection_inference_1.0/src/except.v" \
+"../../../../spam_detection_inference_1.0/src/fcmp.v" \
+"../../../../spam_detection_inference_1.0/src/fpu.v" \
+"../../../../spam_detection_inference_1.0/src/post_norm.v" \
+"../../../../spam_detection_inference_1.0/src/pre_norm.v" \
+"../../../../spam_detection_inference_1.0/src/pre_norm_fmul.v" \
+"../../../../spam_detection_inference_1.0/src/primitives.v" \
+"../../../../spam_detection_inference_1.0/hdl/spam_detection_inference_v1_0_S00_AXI.v" \
+"../../../../spam_detection_inference_1.0/hdl/spam_detection_inference_v1_0.v" \
+"../../../../spam_detection_inference_1.0/src/spam_detection_controller.v" \
+"../../../../spam_detection_inference_1.0/src/spam_detection_controller_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

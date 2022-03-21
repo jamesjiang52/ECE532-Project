@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.3.1 (64-bit)
+# SW Build 2489853 on Tue Mar 26 04:20:25 MDT 2019
+# IP Build 2486929 on Tue Mar 26 06:44:21 MDT 2019
+# Start of session at: Tue Mar 15 23:50:21 2022
+# Process ID: 24512
+# Current directory: C:/Users/Owner/ECE532/project/Client_FPGA/Feb_27_proj/ip_repo/edit_spam_detection_inference_v1_0.runs/synth_1
+# Command line: vivado.exe -log spam_detection_inference_v1_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source spam_detection_inference_v1_0.tcl
+# Log file: C:/Users/Owner/ECE532/project/Client_FPGA/Feb_27_proj/ip_repo/edit_spam_detection_inference_v1_0.runs/synth_1/spam_detection_inference_v1_0.vds
+# Journal file: C:/Users/Owner/ECE532/project/Client_FPGA/Feb_27_proj/ip_repo/edit_spam_detection_inference_v1_0.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source spam_detection_inference_v1_0.tcl -notrace

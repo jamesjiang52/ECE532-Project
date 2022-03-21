@@ -1,0 +1,5 @@
+set_property SRC_FILE_INFO {cfile:C:/Users/Owner/ECE532/project/Client_FPGA/Feb_27_proj/client_proj/client_proj.srcs/constrs_1/new/eth_ref_clk.xdc rfile:../../../client_proj.srcs/constrs_1/new/eth_ref_clk.xdc id:1} [current_design]
+set_property src_info {type:XDC file:1 line:1 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict {PACKAGE_PIN D5 IOSTANDARD LVCMOS33} [get_ports eth_ref_clk]
+set_property src_info {type:XDC file:1 line:2 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict {PACKAGE_PIN H17 IOSTANDARD LVCMOS33} [get_ports result]

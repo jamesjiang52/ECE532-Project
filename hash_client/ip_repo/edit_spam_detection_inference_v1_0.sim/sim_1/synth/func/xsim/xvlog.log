@@ -1,0 +1,37 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "c:/users/owner/ece532/project/client_fpga/feb_27_proj/ip_repo/edit_spam_detection_inference_v1_0.sim/sim_1/synth/func/xsim/fpu_func_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module div_r2
+INFO: [VRFC 10-311] analyzing module except
+INFO: [VRFC 10-311] analyzing module fifo_generator_0
+INFO: [VRFC 10-311] analyzing module fpu
+INFO: [VRFC 10-311] analyzing module mul_r2
+INFO: [VRFC 10-311] analyzing module pre_norm
+INFO: [VRFC 10-311] analyzing module pre_norm_fmul
+INFO: [VRFC 10-311] analyzing module spam_detection_controller
+INFO: [VRFC 10-311] analyzing module spam_detection_inference_v1_0
+INFO: [VRFC 10-311] analyzing module spam_detection_inference_v1_0_S00_AXI
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_blk_mem_gen_generic_cstr
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_blk_mem_gen_prim_width
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_blk_mem_gen_prim_wrapper
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_blk_mem_gen_top
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_blk_mem_gen_v8_4_2
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_blk_mem_gen_v8_4_2_synth
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_compare
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_compare_0
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_compare_1
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_compare_2
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_dc_ss
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_fifo_generator_ramfifo
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_fifo_generator_top
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_fifo_generator_v13_2_3
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_fifo_generator_v13_2_3_synth
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_memory
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_rd_bin_cntr
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_rd_logic
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_rd_status_flags_ss
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_updn_cntr
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_wr_bin_cntr
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_wr_logic
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_wr_status_flags_ss
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "c:/users/owner/ece532/project/client_fpga/feb_27_proj/ip_repo/spam_detection_inference_1.0/src/spam_detection_controller_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spam_detection_controller_tb

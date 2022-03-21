@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2018.3.1 (64-bit)
+# SW Build 2489853 on Tue Mar 26 04:20:25 MDT 2019
+# IP Build 2486929 on Tue Mar 26 06:44:21 MDT 2019
+# Start of session at: Wed Feb 23 17:20:41 2022
+# Process ID: 9868
+# Current directory: C:/Users/kimyou94/Feb_23_proj/client_proj
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4512 C:\Users\kimyou94\Feb_23_proj\client_proj\client_proj.xpr
+# Log file: C:/Users/kimyou94/Feb_23_proj/client_proj/vivado.log
+# Journal file: C:/Users/kimyou94/Feb_23_proj/client_proj\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/kimyou94/Feb_23_proj/client_proj/client_proj.xpr
+update_compile_order -fileset sources_1
+launch_sdk -workspace C:/Users/kimyou94/Feb_23_proj/client_proj/client_proj.sdk -hwspec C:/Users/kimyou94/Feb_23_proj/client_proj/client_proj.sdk/design_1_wrapper.hdf

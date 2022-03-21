@@ -1,0 +1,6 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../edit_spam_detection_inference_v1_0.ip_user_files/ipstatic/hdl/fifo_generator_v13_2_rfs.vhd" \
+
+# Do not sort compile order
+nosort

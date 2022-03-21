@@ -1,0 +1,6 @@
+verilog xil_defaultlib  \
+"../../../../spam_detection_inference_1.0/src/fifo_generator_0/sim/fifo_generator_0.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

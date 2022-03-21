@@ -1,0 +1,26 @@
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 980446bd1445489ba176176171143e54 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot spam_detection_controller_tb_behav xil_defaultlib.spam_detection_controller_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.except
+Compiling module xil_defaultlib.pre_norm
+Compiling module xil_defaultlib.pre_norm_fmul
+Compiling module xil_defaultlib.add_sub27
+Compiling module xil_defaultlib.mul_r2
+Compiling module xil_defaultlib.div_r2
+Compiling module xil_defaultlib.post_norm
+Compiling module xil_defaultlib.fpu
+Compiling module xil_defaultlib.fifo_generator_v13_2_3_bhv_ver_s...
+Compiling module xil_defaultlib.fifo_generator_v13_2_3_CONV_VER(...
+Compiling module xil_defaultlib.fifo_generator_vlog_beh(C_COMMON...
+Compiling module xil_defaultlib.fifo_generator_v13_2_3(C_COMMON_...
+Compiling module xil_defaultlib.fifo_generator_0
+Compiling module xil_defaultlib.spam_detection_controller
+Compiling module xil_defaultlib.spam_detection_controller_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot spam_detection_controller_tb_behav

@@ -1,0 +1,25 @@
+#-----------------------------------------------------------
+# Vivado v2018.3.1 (64-bit)
+# SW Build 2489853 on Tue Mar 26 04:20:25 MDT 2019
+# IP Build 2486929 on Tue Mar 26 06:44:21 MDT 2019
+# Start of session at: Sun Feb 27 11:41:34 2022
+# Process ID: 10872
+# Current directory: C:/Users/kimyou94/Feb_23_proj/client_proj
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10748 C:\Users\kimyou94\Feb_23_proj\client_proj\client_proj.xpr
+# Log file: C:/Users/kimyou94/Feb_23_proj/client_proj/vivado.log
+# Journal file: C:/Users/kimyou94/Feb_23_proj/client_proj\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/kimyou94/Feb_23_proj/client_proj/client_proj.xpr
+open_hw
+update_compile_order -fileset sources_1
+launch_sdk -workspace C:/Users/kimyou94/Feb_23_proj/client_proj/client_proj.sdk -hwspec C:/Users/kimyou94/Feb_23_proj/client_proj/client_proj.sdk/design_1_wrapper.hdf
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/kimyou94/Feb_23_proj/client_proj/client_proj.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7a100t_0]
+set_property PROBES.FILE {C:/Users/kimyou94/Feb_23_proj/client_proj/client_proj.runs/impl_1/debug_nets.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {C:/Users/kimyou94/Feb_23_proj/client_proj/client_proj.runs/impl_1/debug_nets.ltx} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"design_1_i/ila_0"}]]
+save_wave_config {C:/Users/kimyou94/Feb_23_proj/client_proj/client_proj.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
