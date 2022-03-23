@@ -31,11 +31,11 @@ This IP instantiates Xilinx FIFO Generator IP and FPU module from Opencore (http
 | 0x1C | ham\_write\_done | RW | Set high after all input probabilistic data are feed to the ham FIFO through ham\_fifo\_din and ham\_fifo\_wr\_en. |
 | 0x20 | spam\_data\_valid | RO | 0: spam inference computation not done.   1: spam inference computation done and spam\_prob is valid. |
 | 0x24 | ham\_data\_valid | RO | 0: ham inference computation not done.   1: ham inference computation done and ham\_prob is valid. |
-| 0x28 | result | RO | Spam detection result. Result is valid when both spam\_data\_valid and ham\_data\_valid are 1.   0: spam email   1: non-spam email |
+| 0x28 | result | RO | Spam detection result. Result is valid when both spam\_data\_valid and ham\_data\_valid are 1. 0: non-spam email 1: spam email |
 
 ## 5. Software Application
 
-Pseudo code for spam dectection inference
+Pseudo code for spam dectection inference.
 
 	spam_list = list of probabilistic data from the spam bag of words from the pretrained model (already taken log)
 	ham_list = list of probabilistic data from the non-spam bag of words from the pretrained model (already taken log)
