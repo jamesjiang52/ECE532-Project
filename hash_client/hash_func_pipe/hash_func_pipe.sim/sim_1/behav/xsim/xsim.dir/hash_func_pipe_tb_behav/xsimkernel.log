@@ -1,7 +1,0 @@
-Running: xsim.dir/hash_func_pipe_tb_behav/xsimk.exe -simmode gui -wdb hash_func_pipe_tb_behav.wdb -simrunnum 0 -socket 50988
-Design successfully loaded
-Design Loading Memory Usage: 6156 KB (Peak: 6156 KB)
-Design Loading CPU Usage: 30 ms
-Simulation completed
-Simulation Memory Usage: 7072 KB (Peak: 7072 KB)
-Simulation CPU Usage: 46 ms
