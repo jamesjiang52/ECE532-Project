@@ -1,6 +1,7 @@
  # HASH_FUNC IP
  
  ## Directory
+  * atomic : atomic version of hash function ip
   * software : software model of hash_key ip in c
   * src : contains hash_func ip hdl files
   * tb : contains testbenches for submodules
