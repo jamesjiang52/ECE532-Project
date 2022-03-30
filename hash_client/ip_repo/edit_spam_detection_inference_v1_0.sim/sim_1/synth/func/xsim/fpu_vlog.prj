@@ -1,7 +1,0 @@
-# compile verilog/system verilog design source files
-verilog xil_defaultlib  \
-"fpu_func_synth.v" \
-"../../../../../spam_detection_inference_1.0/src/spam_detection_controller_tb.v" \
-
-# Do not sort compile order
-nosort

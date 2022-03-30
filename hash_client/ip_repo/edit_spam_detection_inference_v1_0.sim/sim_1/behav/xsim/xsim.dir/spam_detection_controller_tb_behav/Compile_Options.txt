@@ -1,1 +1,0 @@
--wto "980446bd1445489ba176176171143e54" --incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "unisims_ver" -L "unimacro_ver" -L "secureip" -L "xpm" --snapshot "spam_detection_controller_tb_behav" "xil_defaultlib.spam_detection_controller_tb" "xil_defaultlib.glbl" -log "elaborate.log" 
