@@ -26,6 +26,7 @@
  ### 4. References
  MD5 Software Algorithm:
   * R.Rivest, The MD5 Message-Digest Algorithm, RFC 1321, MIT LCS & RSA Data Security, Inc., April 1992
+
 Murmur3 Software Algorithm:
   * Aappleby, smhasher, (2014), Github repository, https://github.com/aappleby/smhasher
 
