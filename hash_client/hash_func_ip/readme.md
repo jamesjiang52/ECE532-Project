@@ -23,4 +23,7 @@
 | 0x38 | Done Ctrl | RW | *Byte3*: 1 indicates the total num of words are processed. *Byte2*: Number of words left to process. *Byte0*: 1 indicate the result is valid and 0 indicate the data is not valid. When the result is read, this byte has to set to 0 to read the next available hash\_key from fifo |
 | 0x3C | Result | R | Hash key result |
 
- 
+ ### 4. References
+  * R.Rivest, The MD5 Message-Digest Algorithm, RFC 1321, MIT LCS & RSA Data Security, Inc., April 1992
+  * Aappleby, smhasher, (2014), Github repository, https://github.com/aappleby/smhasher
+
