@@ -34,7 +34,7 @@ The SD Card Controller IP is responsible for data transfer directly from the SD 
 
 Once the reset signal is deserted and the load signal is high, the SD controller data transfer from SD card to DDR will start. Once the loaded signal output is set high by the SD controller, the data transfer is finished.
 
-Pseudo Code for SD card controller.
+Pseudocode for SD card controller.
 
 	resetn = 0;
 	resetn = 1;
