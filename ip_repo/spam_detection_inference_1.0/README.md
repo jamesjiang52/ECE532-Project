@@ -1,8 +1,8 @@
 # Spam Detection Inference IP Block
 
 ## 1. Overview
-The Spam Detection Inference IP block is designed to receive probabilistic data from the bag of word model and compute the spam detection result on whether the email is spam or non-spam.
-This IP instantiates Xilinx FIFO Generator IP and FPU module from Opencore (https://opencores.org/projects/fpu) for floating point addition and comparison.  
+The Spam Detection Inference IP block is designed to receive probabilistic data from the “bag-of-word” model and compute the spam detection result on whether the email is spam or non-spam. 
+This IP instantiates Xilinx FIFO Generator IP and FPU module from OpenCores (https://opencores.org/projects/fpu) for floating-point addition and comparison. 
 
 ## 2. Block Diagram
 
@@ -35,7 +35,8 @@ This IP instantiates Xilinx FIFO Generator IP and FPU module from Opencore (http
 
 ## 5. Software Application
 
-Pseudo code for spam dectection inference.
+To run the IP block in software, first writes the probabilistic data to the FIFOs in the Spam Detection Inference IP through the AXI interface. 
+Then wait (polling) until the inference computation is finished and read the result (spam or non-spam email). 
 
 	spam_list = list of probabilistic data from the spam bag of words from the pretrained model (already taken log)
 	ham_list = list of probabilistic data from the non-spam bag of words from the pretrained model (already taken log)
