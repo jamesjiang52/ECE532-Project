@@ -19,7 +19,7 @@
 | --- | --- | --- | --- |
 | 0x0 | Start Ctrl  | RW | LSb is used to indicate the data stored in reg 2 to 12 are valid and start the hash key generation process |
 | 0x8 | Num Words | W | Used to store the total number of words to process |
-| 0xC \- 0x2C | Data Regs | W | Registers to store a word. If the word is less than 416 bits the rest should be padded with 0s |
+| 0xC \- 0x2C | Data Regs | W | Registers to store a word. If the word is less than 288 bits the rest should be padded with 0s |
 | 0x30 | Data length | W | Register to store the number of chars of the current word |
 | 0x34 | Done Ctrl | RW | *Byte3*: 1 indicates the total num of words are processed. *Byte2*: Number of words left to process. *Byte0*: 1 indicate the result is valid and 0 indicate the data is not valid. When the result is read, this byte has to set to 0 to read the next available hash\_key from fifo |
 | 0x38 | Result | R | Hash key result |
