@@ -1,0 +1,445 @@
+#-----------------------------------------------------------
+# Vivado v2018.3.1 (64-bit)
+# SW Build 2489853 on Tue Mar 26 04:20:25 MDT 2019
+# IP Build 2486929 on Tue Mar 26 06:44:21 MDT 2019
+# Start of session at: Mon Mar 14 15:18:11 2022
+# Process ID: 5760
+# Current directory: C:/Users/jiangja5/hash_server
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4596 C:\Users\jiangja5\hash_server\hash_server.xpr
+# Log file: C:/Users/jiangja5/hash_server/vivado.log
+# Journal file: C:/Users/jiangja5/hash_server\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/jiangja5/hash_server/hash_server.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/jiangja5/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/DESL/Xilinx/Vivado/2018.3/data/ip'.
+open_project: Time (s): cpu = 00:00:31 ; elapsed = 00:00:30 . Memory (MB): peak = 1029.879 ; gain = 411.371
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.3.1
+  **** Build date : Mar 26 2019-05:02:51
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+connect_hw_server: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 1861.535 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210276723936B
+set_property PROGRAM.FILE {C:/Users/jiangja5/hash_server/hash_server.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7a200t_0]
+current_hw_device [get_hw_devices xc7a200t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a200t_0] 0]
+INFO: [Labtools 27-1435] Device xc7a200t (JTAG device index = 0) is not programmed (DONE status = 0).
+set_property PROBES.FILE {} [get_hw_devices xc7a200t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a200t_0]
+set_property PROGRAM.FILE {C:/Users/jiangja5/hash_server/hash_server.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7a200t_0]
+program_hw_devices [get_hw_devices xc7a200t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2214.773 ; gain = 0.059
+refresh_hw_device [lindex [get_hw_devices xc7a200t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a200t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+launch_sdk -workspace C:/Users/jiangja5/hash_server/hash_server.sdk -hwspec C:/Users/jiangja5/hash_server/hash_server.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/jiangja5/hash_server/hash_server.sdk -hwspec C:/Users/jiangja5/hash_server/hash_server.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+open_bd_design {C:/Users/jiangja5/hash_server/hash_server.srcs/sources_1/bd/design_1/design_1.bd}
+Adding cell -- xilinx.com:ip:lmb_bram_if_cntlr:4.0 - dlmb_bram_if_cntlr
+Adding cell -- xilinx.com:ip:lmb_v10:3.0 - dlmb_v10
+Adding cell -- xilinx.com:ip:lmb_bram_if_cntlr:4.0 - ilmb_bram_if_cntlr
+Adding cell -- xilinx.com:ip:lmb_v10:3.0 - ilmb_v10
+Adding cell -- xilinx.com:ip:blk_mem_gen:8.4 - lmb_bram
+Adding cell -- xilinx.com:ip:axi_timer:2.0 - axi_timer_0
+Adding cell -- xilinx.com:ip:axi_uartlite:2.0 - axi_uartlite_0
+Adding cell -- xilinx.com:ip:clk_wiz:6.0 - clk_wiz_1
+Adding cell -- xilinx.com:ip:mdm:3.2 - mdm_1
+Adding cell -- xilinx.com:ip:microblaze:11.0 - microblaze_0
+Adding cell -- xilinx.com:ip:axi_intc:4.1 - microblaze_0_axi_intc
+Adding cell -- xilinx.com:ip:axi_interconnect:2.1 - microblaze_0_axi_periph
+Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding cell -- xilinx.com:ip:axi_clock_converter:2.1 - auto_cc
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding cell -- xilinx.com:ip:axi_clock_converter:2.1 - auto_cc
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding cell -- xilinx.com:ip:axi_clock_converter:2.1 - auto_cc
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding cell -- xilinx.com:ip:axi_mmu:2.1 - s00_mmu
+Adding cell -- xilinx.com:ip:axi_mmu:2.1 - s01_mmu
+Adding cell -- xilinx.com:ip:axi_mmu:2.1 - s02_mmu
+Adding cell -- xilinx.com:ip:axi_mmu:2.1 - s03_mmu
+Adding cell -- xilinx.com:ip:axi_mmu:2.1 - s04_mmu
+Adding cell -- xilinx.com:ip:axi_mmu:2.1 - s05_mmu
+Adding cell -- xilinx.com:ip:axi_mmu:2.1 - s06_mmu
+Adding cell -- xilinx.com:ip:xlconcat:2.1 - microblaze_0_xlconcat
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_clk_wiz_1_100M
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_clk_wiz_1_100M1
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_mig_7series_0_81M
+Adding cell -- user.org:user:hash_table_mgr:1.0 - hash_table_mgr_0
+Adding cell -- user.org:user:hash_table_mgr_mig:1.0 - hash_table_mgr_mig_0
+Adding cell -- xilinx.com:ip:mig_7series:4.2 - mig_7series_0
+Adding cell -- xilinx.com:user:sd_card_controller:1.0 - sd_card_controller_0
+Adding cell -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_0
+Adding cell -- xilinx.com:ip:xlconstant:1.1 - xlconstant_0
+Adding cell -- xilinx.com:ip:axi_ethernet:7.1 - axi_ethernet_0
+Adding cell -- xilinx.com:ip:axi_dma:7.1 - axi_ethernet_0_dma
+WARNING: [BD 41-1731] Type mismatch between connected pins: /axi_gpio_0/gpio_io_o(undef) and /sd_card_controller_0/resetn(rst)
+Excluding </axi_ethernet_0/s_axi/Reg0> from </axi_ethernet_0_dma/Data_SG>
+Excluding </axi_ethernet_0_dma/S_AXI_LITE/Reg> from </axi_ethernet_0_dma/Data_SG>
+Excluding </axi_gpio_0/S_AXI/Reg> from </axi_ethernet_0_dma/Data_SG>
+Excluding </axi_timer_0/S_AXI/Reg> from </axi_ethernet_0_dma/Data_SG>
+Excluding </axi_uartlite_0/S_AXI/Reg> from </axi_ethernet_0_dma/Data_SG>
+Excluding </hash_table_mgr_0/S00_AXI/S00_AXI_reg> from </axi_ethernet_0_dma/Data_SG>
+Excluding </microblaze_0_axi_intc/S_AXI/Reg> from </axi_ethernet_0_dma/Data_SG>
+Excluding </axi_ethernet_0/s_axi/Reg0> from </axi_ethernet_0_dma/Data_MM2S>
+Excluding </axi_ethernet_0_dma/S_AXI_LITE/Reg> from </axi_ethernet_0_dma/Data_MM2S>
+Excluding </axi_gpio_0/S_AXI/Reg> from </axi_ethernet_0_dma/Data_MM2S>
+Excluding </axi_timer_0/S_AXI/Reg> from </axi_ethernet_0_dma/Data_MM2S>
+Excluding </axi_uartlite_0/S_AXI/Reg> from </axi_ethernet_0_dma/Data_MM2S>
+Excluding </hash_table_mgr_0/S00_AXI/S00_AXI_reg> from </axi_ethernet_0_dma/Data_MM2S>
+Excluding </microblaze_0_axi_intc/S_AXI/Reg> from </axi_ethernet_0_dma/Data_MM2S>
+Excluding </axi_ethernet_0/s_axi/Reg0> from </axi_ethernet_0_dma/Data_S2MM>
+Excluding </axi_ethernet_0_dma/S_AXI_LITE/Reg> from </axi_ethernet_0_dma/Data_S2MM>
+Excluding </axi_gpio_0/S_AXI/Reg> from </axi_ethernet_0_dma/Data_S2MM>
+Excluding </axi_timer_0/S_AXI/Reg> from </axi_ethernet_0_dma/Data_S2MM>
+Excluding </axi_uartlite_0/S_AXI/Reg> from </axi_ethernet_0_dma/Data_S2MM>
+Excluding </hash_table_mgr_0/S00_AXI/S00_AXI_reg> from </axi_ethernet_0_dma/Data_S2MM>
+Excluding </microblaze_0_axi_intc/S_AXI/Reg> from </axi_ethernet_0_dma/Data_S2MM>
+Successfully read diagram <design_1> from BD file <C:/Users/jiangja5/hash_server/hash_server.srcs/sources_1/bd/design_1/design_1.bd>
+WARNING: [BD 41-1731] Type mismatch between connected pins: /c_counter_binary_0/THRESH0(data) and /c_shift_ram_0/CE(ce)
+WARNING: [BD 41-1731] Type mismatch between connected pins: /c_shift_ram_0/Q(data) and /phy_rst_n(rst)
+open_bd_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2348.496 ; gain = 89.691
+write_hwdef -force  -file C:/Users/jiangja5/hash_server/hash_server.sdk/design_1_wrapper.hdf
+close_bd_design [get_bd_designs design_1]
+write_hwdef -force  -file C:/Users/jiangja5/hash_server/hash_server.sdk/design_1_wrapper.hdf
+open_bd_design {C:/Users/jiangja5/hash_server/hash_server.srcs/sources_1/bd/design_1/design_1.bd}
+Adding cell -- xilinx.com:ip:lmb_bram_if_cntlr:4.0 - dlmb_bram_if_cntlr
+Adding cell -- xilinx.com:ip:lmb_v10:3.0 - dlmb_v10
+Adding cell -- xilinx.com:ip:lmb_bram_if_cntlr:4.0 - ilmb_bram_if_cntlr
+Adding cell -- xilinx.com:ip:lmb_v10:3.0 - ilmb_v10
+Adding cell -- xilinx.com:ip:blk_mem_gen:8.4 - lmb_bram
+Adding cell -- xilinx.com:ip:axi_timer:2.0 - axi_timer_0
+Adding cell -- xilinx.com:ip:axi_uartlite:2.0 - axi_uartlite_0
+Adding cell -- xilinx.com:ip:clk_wiz:6.0 - clk_wiz_1
+Adding cell -- xilinx.com:ip:mdm:3.2 - mdm_1
+Adding cell -- xilinx.com:ip:microblaze:11.0 - microblaze_0
+Adding cell -- xilinx.com:ip:axi_intc:4.1 - microblaze_0_axi_intc
+Adding cell -- xilinx.com:ip:axi_interconnect:2.1 - microblaze_0_axi_periph
+Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding cell -- xilinx.com:ip:axi_clock_converter:2.1 - auto_cc
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding cell -- xilinx.com:ip:axi_clock_converter:2.1 - auto_cc
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding cell -- xilinx.com:ip:axi_clock_converter:2.1 - auto_cc
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding cell -- xilinx.com:ip:axi_mmu:2.1 - s00_mmu
+Adding cell -- xilinx.com:ip:axi_mmu:2.1 - s01_mmu
+Adding cell -- xilinx.com:ip:axi_mmu:2.1 - s02_mmu
+Adding cell -- xilinx.com:ip:axi_mmu:2.1 - s03_mmu
+Adding cell -- xilinx.com:ip:axi_mmu:2.1 - s04_mmu
+Adding cell -- xilinx.com:ip:axi_mmu:2.1 - s05_mmu
+Adding cell -- xilinx.com:ip:axi_mmu:2.1 - s06_mmu
+Adding cell -- xilinx.com:ip:xlconcat:2.1 - microblaze_0_xlconcat
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_clk_wiz_1_100M
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_clk_wiz_1_100M1
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_mig_7series_0_81M
+Adding cell -- user.org:user:hash_table_mgr:1.0 - hash_table_mgr_0
+Adding cell -- user.org:user:hash_table_mgr_mig:1.0 - hash_table_mgr_mig_0
+Adding cell -- xilinx.com:ip:mig_7series:4.2 - mig_7series_0
+Adding cell -- xilinx.com:user:sd_card_controller:1.0 - sd_card_controller_0
+Adding cell -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_0
+Adding cell -- xilinx.com:ip:xlconstant:1.1 - xlconstant_0
+Adding cell -- xilinx.com:ip:axi_ethernet:7.1 - axi_ethernet_0
+Adding cell -- xilinx.com:ip:axi_dma:7.1 - axi_ethernet_0_dma
+WARNING: [BD 41-1731] Type mismatch between connected pins: /axi_gpio_0/gpio_io_o(undef) and /sd_card_controller_0/resetn(rst)
+Excluding </axi_ethernet_0/s_axi/Reg0> from </axi_ethernet_0_dma/Data_SG>
+Excluding </axi_ethernet_0_dma/S_AXI_LITE/Reg> from </axi_ethernet_0_dma/Data_SG>
+Excluding </axi_gpio_0/S_AXI/Reg> from </axi_ethernet_0_dma/Data_SG>
+Excluding </axi_timer_0/S_AXI/Reg> from </axi_ethernet_0_dma/Data_SG>
+Excluding </axi_uartlite_0/S_AXI/Reg> from </axi_ethernet_0_dma/Data_SG>
+Excluding </hash_table_mgr_0/S00_AXI/S00_AXI_reg> from </axi_ethernet_0_dma/Data_SG>
+Excluding </microblaze_0_axi_intc/S_AXI/Reg> from </axi_ethernet_0_dma/Data_SG>
+Excluding </axi_ethernet_0/s_axi/Reg0> from </axi_ethernet_0_dma/Data_MM2S>
+Excluding </axi_ethernet_0_dma/S_AXI_LITE/Reg> from </axi_ethernet_0_dma/Data_MM2S>
+Excluding </axi_gpio_0/S_AXI/Reg> from </axi_ethernet_0_dma/Data_MM2S>
+Excluding </axi_timer_0/S_AXI/Reg> from </axi_ethernet_0_dma/Data_MM2S>
+Excluding </axi_uartlite_0/S_AXI/Reg> from </axi_ethernet_0_dma/Data_MM2S>
+Excluding </hash_table_mgr_0/S00_AXI/S00_AXI_reg> from </axi_ethernet_0_dma/Data_MM2S>
+Excluding </microblaze_0_axi_intc/S_AXI/Reg> from </axi_ethernet_0_dma/Data_MM2S>
+Excluding </axi_ethernet_0/s_axi/Reg0> from </axi_ethernet_0_dma/Data_S2MM>
+Excluding </axi_ethernet_0_dma/S_AXI_LITE/Reg> from </axi_ethernet_0_dma/Data_S2MM>
+Excluding </axi_gpio_0/S_AXI/Reg> from </axi_ethernet_0_dma/Data_S2MM>
+Excluding </axi_timer_0/S_AXI/Reg> from </axi_ethernet_0_dma/Data_S2MM>
+Excluding </axi_uartlite_0/S_AXI/Reg> from </axi_ethernet_0_dma/Data_S2MM>
+Excluding </hash_table_mgr_0/S00_AXI/S00_AXI_reg> from </axi_ethernet_0_dma/Data_S2MM>
+Excluding </microblaze_0_axi_intc/S_AXI/Reg> from </axi_ethernet_0_dma/Data_S2MM>
+Successfully read diagram <design_1> from BD file <C:/Users/jiangja5/hash_server/hash_server.srcs/sources_1/bd/design_1/design_1.bd>
+WARNING: [BD 41-1731] Type mismatch between connected pins: /c_counter_binary_0/THRESH0(data) and /c_shift_ram_0/CE(ce)
+WARNING: [BD 41-1731] Type mismatch between connected pins: /c_shift_ram_0/Q(data) and /phy_rst_n(rst)
+apply_board_connection -board_interface "ddr3_sdram" -ip_intf "mig_7series_0/mig_ddr_interface" -diagram "design_1" 
+INFO: [board_interface 100-100] set_property CONFIG.BOARD_MIG_PARAM ddr3_sdram [get_bd_cells -quiet /mig_7series_0]
+INFO: [board_interface 100-100] delete_bd_objs -quiet /mig_7series_0_DDR3 /DDR3_0
+INFO: [board_interface 100-100] create_bd_intf_port -mode Master -vlnv xilinx.com:interface:ddrx_rtl:1.0 DDR3_0
+INFO: [board_interface 100-100] connect_bd_intf_net /DDR3_0 /mig_7series_0/DDR3
+apply_board_connection: Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 2547.613 ; gain = 191.320
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_quad_spi:3.2 axi_quad_spi_0
+apply_board_connection -board_interface "qspi_flash" -ip_intf "axi_quad_spi_0/SPI_0" -diagram "design_1" 
+INFO: [board_interface 100-100] set_property CONFIG.USE_BOARD_FLOW true [get_bd_cells -quiet /axi_quad_spi_0]
+INFO: [board_interface 100-100] set_property CONFIG.QSPI_BOARD_INTERFACE qspi_flash [get_bd_cells -quiet /axi_quad_spi_0]
+INFO: [board_interface 100-100] create_bd_intf_port -mode Master -vlnv xilinx.com:interface:spi_rtl:1.0 qspi_flash
+INFO: [board_interface 100-100] connect_bd_intf_net /qspi_flash /axi_quad_spi_0/SPI_0
+endgroup
+undo
+INFO: [Common 17-17] undo 'endgroup'
+INFO: [Common 17-17] undo 'apply_board_connection -board_interface "qspi_flash" -ip_intf "axi_quad_spi_0/SPI_0" -diagram "design_1" '
+INFO: [Common 17-17] undo 'create_bd_cell -type ip -vlnv xilinx.com:ip:axi_quad_spi:3.2 axi_quad_spi_0'
+INFO: [Common 17-17] undo 'startgroup'
+save_bd_design
+Wrote  : <C:\Users\jiangja5\hash_server\hash_server.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/Users/jiangja5/hash_server/hash_server.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+close_bd_design [get_bd_designs design_1]
+close_hw
+make_wrapper -files [get_files C:/Users/jiangja5/hash_server/hash_server.srcs/sources_1/bd/design_1/design_1.bd] -top
+WARNING: [BD 41-1282] Ignoring parameter HAS_BURST
+WARNING: [BD 41-1281] Parameter HAS_BURST is not defined on /axi_ethernet_0_dma/M_AXIS_MM2S. Setting parameter on /axi_ethernet_0_dma/M_AXIS_MM2S failed
+WARNING: [BD 41-1282] Ignoring parameter HAS_BURST
+WARNING: [BD 41-1281] Parameter HAS_BURST is not defined on /axi_ethernet_0_dma/M_AXIS_CNTRL. Setting parameter on /axi_ethernet_0_dma/M_AXIS_CNTRL failed
+WARNING: [BD 41-1731] Type mismatch between connected pins: /axi_gpio_0/gpio_io_o(undef) and /sd_card_controller_0/resetn(rst)
+Excluding </axi_ethernet_0/s_axi/Reg0> from </axi_ethernet_0_dma/Data_SG>
+Excluding </axi_ethernet_0_dma/S_AXI_LITE/Reg> from </axi_ethernet_0_dma/Data_SG>
+Excluding </axi_gpio_0/S_AXI/Reg> from </axi_ethernet_0_dma/Data_SG>
+Excluding </axi_timer_0/S_AXI/Reg> from </axi_ethernet_0_dma/Data_SG>
+Excluding </axi_uartlite_0/S_AXI/Reg> from </axi_ethernet_0_dma/Data_SG>
+Excluding </hash_table_mgr_0/S00_AXI/S00_AXI_reg> from </axi_ethernet_0_dma/Data_SG>
+Excluding </microblaze_0_axi_intc/S_AXI/Reg> from </axi_ethernet_0_dma/Data_SG>
+Excluding </axi_ethernet_0/s_axi/Reg0> from </axi_ethernet_0_dma/Data_MM2S>
+Excluding </axi_ethernet_0_dma/S_AXI_LITE/Reg> from </axi_ethernet_0_dma/Data_MM2S>
+Excluding </axi_gpio_0/S_AXI/Reg> from </axi_ethernet_0_dma/Data_MM2S>
+Excluding </axi_timer_0/S_AXI/Reg> from </axi_ethernet_0_dma/Data_MM2S>
+Excluding </axi_uartlite_0/S_AXI/Reg> from </axi_ethernet_0_dma/Data_MM2S>
+Excluding </hash_table_mgr_0/S00_AXI/S00_AXI_reg> from </axi_ethernet_0_dma/Data_MM2S>
+Excluding </microblaze_0_axi_intc/S_AXI/Reg> from </axi_ethernet_0_dma/Data_MM2S>
+Excluding </axi_ethernet_0/s_axi/Reg0> from </axi_ethernet_0_dma/Data_S2MM>
+Excluding </axi_ethernet_0_dma/S_AXI_LITE/Reg> from </axi_ethernet_0_dma/Data_S2MM>
+Excluding </axi_gpio_0/S_AXI/Reg> from </axi_ethernet_0_dma/Data_S2MM>
+Excluding </axi_timer_0/S_AXI/Reg> from </axi_ethernet_0_dma/Data_S2MM>
+Excluding </axi_uartlite_0/S_AXI/Reg> from </axi_ethernet_0_dma/Data_S2MM>
+Excluding </hash_table_mgr_0/S00_AXI/S00_AXI_reg> from </axi_ethernet_0_dma/Data_S2MM>
+Excluding </microblaze_0_axi_intc/S_AXI/Reg> from </axi_ethernet_0_dma/Data_S2MM>
+WARNING: [BD 41-1731] Type mismatch between connected pins: /c_counter_binary_0/THRESH0(data) and /c_shift_ram_0/CE(ce)
+WARNING: [BD 41-1731] Type mismatch between connected pins: /c_shift_ram_0/Q(data) and /phy_rst_n(rst)
+delete_bd_objs: Time (s): cpu = 00:00:16 ; elapsed = 00:00:15 . Memory (MB): peak = 2625.922 ; gain = 13.793
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /microblaze_0_axi_intc/intr
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /microblaze_0_axi_intc/intr
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /microblaze_0_axi_intc/intr
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /microblaze_0_axi_intc/intr
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /microblaze_0_axi_intc/intr
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /microblaze_0_axi_intc/intr
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /microblaze_0_axi_intc/intr
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /microblaze_0_axi_intc/intr
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /microblaze_0_axi_intc/intr
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /microblaze_0_axi_intc/intr
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /microblaze_0_axi_intc/intr
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /microblaze_0_axi_intc/intr
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /microblaze_0_axi_intc/intr
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /microblaze_0_axi_intc/intr
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /microblaze_0_axi_intc/intr
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /microblaze_0_axi_intc/intr
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /microblaze_0_axi_intc/intr
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /microblaze_0_axi_intc/intr
+INFO: [xilinx.com:ip:c_shift_ram:12.0-913] /c_shift_ram_0 Width has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:c_shift_ram:12.0-913] /c_shift_ram_0 Width has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:c_shift_ram:12.0-913] /c_shift_ram_0 Width has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:c_shift_ram:12.0-913] /c_shift_ram_0 Width has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:c_shift_ram:12.0-913] /c_shift_ram_0 Width has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:c_shift_ram:12.0-913] /c_shift_ram_0 Width has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:c_shift_ram:12.0-913] /c_shift_ram_0 Width has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:c_shift_ram:12.0-913] /c_shift_ram_0 Width has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:c_shift_ram:12.0-913] /c_shift_ram_0 Width has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:c_shift_ram:12.0-913] /c_shift_ram_0 Width has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+CRITICAL WARNING: [BD 41-1267] </mig_7series_0/memmap/memaddr> is mapped into related masters </axi_ethernet_0_dma/Data_MM2S> and </hash_table_mgr_mig_0/M00_AXI> at different offsets <0x84000000 [ 64M ]> and <0x80000000 [ 64M ]>
+CRITICAL WARNING: [BD 41-1267] </mig_7series_0/memmap/memaddr> is mapped into related masters </axi_ethernet_0_dma/Data_MM2S> and </hash_table_mgr_mig_0/M00_AXI> at different offsets <0x84000000 [ 64M ]> and <0x80000000 [ 64M ]>
+INFO: [xilinx.com:ip:axi_intc:4.1-1] /microblaze_0_axi_intc: The AXI INTC core has been configured to operate with synchronous clocks.
+INFO: [xilinx.com:ip:axi_intc:4.1-1] /microblaze_0_axi_intc: The AXI INTC core has been configured to operate with synchronous clocks.
+Wrote  : <C:\Users\jiangja5\hash_server\hash_server.srcs\sources_1\bd\design_1\design_1.bd> 
+VHDL Output written to : C:/Users/jiangja5/hash_server/hash_server.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : C:/Users/jiangja5/hash_server/hash_server.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : C:/Users/jiangja5/hash_server/hash_server.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+make_wrapper: Time (s): cpu = 00:00:49 ; elapsed = 00:00:56 . Memory (MB): peak = 2760.180 ; gain = 148.051
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+WARNING: [BD 41-1731] Type mismatch between connected pins: /axi_gpio_0/gpio_io_o(undef) and /sd_card_controller_0/resetn(rst)
+Excluding </axi_ethernet_0/s_axi/Reg0> from </axi_ethernet_0_dma/Data_SG>
+Excluding </axi_ethernet_0_dma/S_AXI_LITE/Reg> from </axi_ethernet_0_dma/Data_SG>
+Excluding </axi_gpio_0/S_AXI/Reg> from </axi_ethernet_0_dma/Data_SG>
+Excluding </axi_timer_0/S_AXI/Reg> from </axi_ethernet_0_dma/Data_SG>
+Excluding </axi_uartlite_0/S_AXI/Reg> from </axi_ethernet_0_dma/Data_SG>
+Excluding </hash_table_mgr_0/S00_AXI/S00_AXI_reg> from </axi_ethernet_0_dma/Data_SG>
+Excluding </microblaze_0_axi_intc/S_AXI/Reg> from </axi_ethernet_0_dma/Data_SG>
+Excluding </axi_ethernet_0/s_axi/Reg0> from </axi_ethernet_0_dma/Data_MM2S>
+Excluding </axi_ethernet_0_dma/S_AXI_LITE/Reg> from </axi_ethernet_0_dma/Data_MM2S>
+Excluding </axi_gpio_0/S_AXI/Reg> from </axi_ethernet_0_dma/Data_MM2S>
+Excluding </axi_timer_0/S_AXI/Reg> from </axi_ethernet_0_dma/Data_MM2S>
+Excluding </axi_uartlite_0/S_AXI/Reg> from </axi_ethernet_0_dma/Data_MM2S>
+Excluding </hash_table_mgr_0/S00_AXI/S00_AXI_reg> from </axi_ethernet_0_dma/Data_MM2S>
+Excluding </microblaze_0_axi_intc/S_AXI/Reg> from </axi_ethernet_0_dma/Data_MM2S>
+Excluding </axi_ethernet_0/s_axi/Reg0> from </axi_ethernet_0_dma/Data_S2MM>
+Excluding </axi_ethernet_0_dma/S_AXI_LITE/Reg> from </axi_ethernet_0_dma/Data_S2MM>
+Excluding </axi_gpio_0/S_AXI/Reg> from </axi_ethernet_0_dma/Data_S2MM>
+Excluding </axi_timer_0/S_AXI/Reg> from </axi_ethernet_0_dma/Data_S2MM>
+Excluding </axi_uartlite_0/S_AXI/Reg> from </axi_ethernet_0_dma/Data_S2MM>
+Excluding </hash_table_mgr_0/S00_AXI/S00_AXI_reg> from </axi_ethernet_0_dma/Data_S2MM>
+Excluding </microblaze_0_axi_intc/S_AXI/Reg> from </axi_ethernet_0_dma/Data_S2MM>
+WARNING: [BD 41-1731] Type mismatch between connected pins: /c_counter_binary_0/THRESH0(data) and /c_shift_ram_0/CE(ce)
+WARNING: [BD 41-1731] Type mismatch between connected pins: /c_shift_ram_0/Q(data) and /phy_rst_n(rst)
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+CRITICAL WARNING: [BD 41-1267] </mig_7series_0/memmap/memaddr> is mapped into related masters </axi_ethernet_0_dma/Data_MM2S> and </hash_table_mgr_mig_0/M00_AXI> at different offsets <0x84000000 [ 64M ]> and <0x80000000 [ 64M ]>
+CRITICAL WARNING: [BD 41-1267] </mig_7series_0/memmap/memaddr> is mapped into related masters </axi_ethernet_0_dma/Data_MM2S> and </hash_table_mgr_mig_0/M00_AXI> at different offsets <0x84000000 [ 64M ]> and <0x80000000 [ 64M ]>
+VHDL Output written to : C:/Users/jiangja5/hash_server/hash_server.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : C:/Users/jiangja5/hash_server/hash_server.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : C:/Users/jiangja5/hash_server/hash_server.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/dlmb_v10 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/ilmb_v10 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/dlmb_bram_if_cntlr .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/ilmb_bram_if_cntlr .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/lmb_bram .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_axi_intc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_xlconcat .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mdm_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_clk_wiz_1_100M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_uartlite_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_timer_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_mig_7series_0_81M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hash_table_mgr_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hash_table_mgr_mig_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_clk_wiz_1_100M1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mig_7series_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block sd_card_controller_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_0 .
+Exporting to file c:/Users/jiangja5/hash_server/hash_server.srcs/sources_1/bd/design_1/ip/design_1_axi_ethernet_0_0/bd_0/hw_handoff/design_1_axi_ethernet_0_0.hwh
+Generated Block Design Tcl file c:/Users/jiangja5/hash_server/hash_server.srcs/sources_1/bd/design_1/ip/design_1_axi_ethernet_0_0/bd_0/hw_handoff/design_1_axi_ethernet_0_0_bd.tcl
+Generated Hardware Definition File c:/Users/jiangja5/hash_server/hash_server.srcs/sources_1/bd/design_1/ip/design_1_axi_ethernet_0_0/bd_0/synth/design_1_axi_ethernet_0_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_ethernet_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_ethernet_0_dma .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/jiangja5/hash_server/hash_server.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_7/design_1_auto_pc_7_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_axi_periph/s00_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/jiangja5/hash_server/hash_server.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_8/design_1_auto_pc_8_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_axi_periph/s01_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/jiangja5/hash_server/hash_server.srcs/sources_1/bd/design_1/ip/design_1_auto_cc_2/design_1_auto_cc_2_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_axi_periph/s02_couplers/auto_cc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/jiangja5/hash_server/hash_server.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_9/design_1_auto_pc_9_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_axi_periph/s02_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/jiangja5/hash_server/hash_server.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_10/design_1_auto_pc_10_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_axi_periph/s03_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/jiangja5/hash_server/hash_server.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_axi_periph/m00_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/jiangja5/hash_server/hash_server.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_axi_periph/m01_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/jiangja5/hash_server/hash_server.srcs/sources_1/bd/design_1/ip/design_1_auto_cc_0/design_1_auto_cc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_axi_periph/m02_couplers/auto_cc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/jiangja5/hash_server/hash_server.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_2/design_1_auto_pc_2_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_axi_periph/m03_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/jiangja5/hash_server/hash_server.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_3/design_1_auto_pc_3_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_axi_periph/m04_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/jiangja5/hash_server/hash_server.srcs/sources_1/bd/design_1/ip/design_1_auto_cc_1/design_1_auto_cc_1_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_axi_periph/m05_couplers/auto_cc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/jiangja5/hash_server/hash_server.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_4/design_1_auto_pc_4_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_axi_periph/m05_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/jiangja5/hash_server/hash_server.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_5/design_1_auto_pc_5_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_axi_periph/m06_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/jiangja5/hash_server/hash_server.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_6/design_1_auto_pc_6_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_axi_periph/m07_couplers/auto_pc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_axi_periph/s00_mmu .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_axi_periph/s01_mmu .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_axi_periph/s02_mmu .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_axi_periph/s03_mmu .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_axi_periph/s04_mmu .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_axi_periph/s05_mmu .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_axi_periph/s06_mmu .
+Exporting to file C:/Users/jiangja5/hash_server/hash_server.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file C:/Users/jiangja5/hash_server/hash_server.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File C:/Users/jiangja5/hash_server/hash_server.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_cc_0, cache-ID = 92c598ce69d860cf; cache size = 90.518 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_s01_mmu_0, cache-ID = 9723adbf6aa23853; cache size = 90.519 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_cc_1, cache-ID = 4db3a87789c47c62; cache size = 90.518 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_9, cache-ID = 24734fbc9ea5ba35; cache size = 90.519 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_cc_2, cache-ID = 2e5e7acf1c2a0de0; cache size = 90.518 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_8, cache-ID = 809d2f01c10bba23; cache size = 90.519 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = fe94ff06beb13cd6; cache size = 90.518 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_s04_mmu_0, cache-ID = 7aa8771012bc9ecb; cache size = 90.519 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_1, cache-ID = fe94ff06beb13cd6; cache size = 90.518 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_s02_mmu_0, cache-ID = 63fbc67bc748d6f5; cache size = 90.519 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_10, cache-ID = 24734fbc9ea5ba35; cache size = 90.518 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_s03_mmu_0, cache-ID = 7af120392d95d7cd; cache size = 90.519 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_2, cache-ID = d3468f2c7860af6c; cache size = 90.518 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_s05_mmu_0, cache-ID = cb6c71fa80957c8e; cache size = 90.519 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_3, cache-ID = fe94ff06beb13cd6; cache size = 90.518 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_7, cache-ID = 24734fbc9ea5ba35; cache size = 90.518 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_4, cache-ID = e97de877d93c69d4; cache size = 90.518 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_6, cache-ID = fe94ff06beb13cd6; cache size = 90.518 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_s06_mmu_0, cache-ID = 5845cef1c29678fd; cache size = 90.519 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_5, cache-ID = fe94ff06beb13cd6; cache size = 90.518 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_s00_mmu_0, cache-ID = 5219e2df4db2d26a; cache size = 90.519 MB.
+[Mon Mar 14 15:58:49 2022] Launched design_1_mig_7series_0_0_synth_1, synth_1...
+Run output will be captured here:
+design_1_mig_7series_0_0_synth_1: C:/Users/jiangja5/hash_server/hash_server.runs/design_1_mig_7series_0_0_synth_1/runme.log
+synth_1: C:/Users/jiangja5/hash_server/hash_server.runs/synth_1/runme.log
+[Mon Mar 14 15:58:49 2022] Launched impl_1...
+Run output will be captured here: C:/Users/jiangja5/hash_server/hash_server.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:47 ; elapsed = 00:00:46 . Memory (MB): peak = 4024.578 ; gain = 1203.367
+open_run impl_1
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+INFO: [Netlist 29-17] Analyzing 1765 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.3.1
+open_run: Time (s): cpu = 00:00:18 ; elapsed = 00:00:23 . Memory (MB): peak = 4024.953 ; gain = 0.000
+INFO: [Common 17-344] 'open_run' was cancelled
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.3.1
+  **** Build date : Mar 26 2019-05:02:51
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210276723936B
+set_property PROGRAM.FILE {C:/Users/jiangja5/hash_server/hash_server.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7a200t_0]
+current_hw_device [get_hw_devices xc7a200t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a200t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a200t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a200t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a200t_0]
+set_property PROGRAM.FILE {C:/Users/jiangja5/hash_server/hash_server.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7a200t_0]
+program_hw_devices [get_hw_devices xc7a200t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 4051.703 ; gain = 0.000
+refresh_hw_device [lindex [get_hw_devices xc7a200t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a200t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.

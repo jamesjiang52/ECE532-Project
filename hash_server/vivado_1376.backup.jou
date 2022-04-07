@@ -1,0 +1,101 @@
+#-----------------------------------------------------------
+# Vivado v2018.3.1 (64-bit)
+# SW Build 2489853 on Tue Mar 26 04:20:25 MDT 2019
+# IP Build 2486929 on Tue Mar 26 06:44:21 MDT 2019
+# Start of session at: Sun Mar 20 10:41:42 2022
+# Process ID: 1376
+# Current directory: C:/Users/jiangja5/hash_server
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent96 C:\Users\jiangja5\hash_server\hash_server.xpr
+# Log file: C:/Users/jiangja5/hash_server/vivado.log
+# Journal file: C:/Users/jiangja5/hash_server\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/jiangja5/hash_server/hash_server.xpr
+open_bd_design {C:/Users/jiangja5/hash_server/hash_server.srcs/sources_1/bd/design_1/design_1.bd}
+delete_bd_objs [get_bd_intf_nets microblaze_0_axi_periph_M02_AXI]
+disconnect_bd_net /mig_7series_0_ui_clk [get_bd_pins microblaze_0_axi_periph/M02_ACLK]
+disconnect_bd_net /rst_mig_7series_0_81M_peripheral_aresetn [get_bd_pins microblaze_0_axi_periph/M02_ARESETN]
+delete_bd_objs [get_bd_intf_nets sd_card_controller_0_M00_AXI]
+disconnect_bd_net /microblaze_0_Clk [get_bd_pins microblaze_0_axi_periph/S03_ACLK]
+disconnect_bd_net /rst_clk_wiz_1_100M_peripheral_aresetn [get_bd_pins microblaze_0_axi_periph/S03_ARESETN]
+delete_bd_objs [get_bd_intf_nets hash_table_mgr_mig_0_M00_AXI]
+disconnect_bd_net /clk_wiz_1_clk_out3 [get_bd_pins microblaze_0_axi_periph/S02_ACLK]
+disconnect_bd_net /rst_clk_wiz_1_100M1_peripheral_aresetn [get_bd_pins microblaze_0_axi_periph/S02_ARESETN]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 axi_interconnect_0
+endgroup
+set_property -dict [list CONFIG.NUM_SI {3} CONFIG.NUM_MI {1}] [get_bd_cells axi_interconnect_0]
+connect_bd_intf_net -boundary_type upper [get_bd_intf_pins axi_interconnect_0/M00_AXI] [get_bd_intf_pins mig_7series_0/S_AXI]
+connect_bd_net [get_bd_pins axi_interconnect_0/M00_ACLK] [get_bd_pins mig_7series_0/ui_clk]
+connect_bd_net [get_bd_pins axi_interconnect_0/M00_ARESETN] [get_bd_pins rst_mig_7series_0_81M/peripheral_aresetn]
+connect_bd_net [get_bd_pins axi_interconnect_0/ACLK] [get_bd_pins clk_wiz_1/clk_out1]
+connect_bd_net [get_bd_pins axi_interconnect_0/ARESETN] [get_bd_pins rst_clk_wiz_1_100M/peripheral_aresetn]
+connect_bd_intf_net -boundary_type upper [get_bd_intf_pins microblaze_0_axi_periph/M02_AXI] [get_bd_intf_pins axi_interconnect_0/S00_AXI]
+connect_bd_net [get_bd_pins axi_interconnect_0/S00_ACLK] [get_bd_pins clk_wiz_1/clk_out1]
+connect_bd_net [get_bd_pins axi_interconnect_0/S00_ARESETN] [get_bd_pins rst_clk_wiz_1_100M/peripheral_aresetn]
+connect_bd_intf_net [get_bd_intf_pins sd_card_controller_0/M00_AXI] -boundary_type upper [get_bd_intf_pins axi_interconnect_0/S02_AXI]
+connect_bd_net [get_bd_pins axi_interconnect_0/S02_ACLK] [get_bd_pins clk_wiz_1/clk_out1]
+connect_bd_net [get_bd_pins axi_interconnect_0/S02_ARESETN] [get_bd_pins rst_clk_wiz_1_100M/peripheral_aresetn]
+connect_bd_intf_net [get_bd_intf_pins hash_table_mgr_mig_0/M00_AXI] -boundary_type upper [get_bd_intf_pins axi_interconnect_0/S01_AXI]
+connect_bd_net [get_bd_pins axi_interconnect_0/S01_ACLK] [get_bd_pins clk_wiz_1/clk_out3]
+connect_bd_net [get_bd_pins axi_interconnect_0/S01_ARESETN] [get_bd_pins rst_clk_wiz_1_100M1/peripheral_aresetn]
+save_bd_design
+connect_bd_net [get_bd_pins microblaze_0_axi_periph/S02_ACLK] [get_bd_pins clk_wiz_1/clk_out1]
+connect_bd_net [get_bd_pins microblaze_0_axi_periph/S03_ACLK] [get_bd_pins clk_wiz_1/clk_out1]
+connect_bd_net [get_bd_pins microblaze_0_axi_periph/M02_ACLK] [get_bd_pins clk_wiz_1/clk_out1]
+connect_bd_net [get_bd_pins microblaze_0_axi_periph/M02_ARESETN] [get_bd_pins rst_clk_wiz_1_100M/peripheral_aresetn]
+connect_bd_net [get_bd_pins microblaze_0_axi_periph/S03_ARESETN] [get_bd_pins rst_clk_wiz_1_100M/peripheral_aresetn]
+connect_bd_net [get_bd_pins microblaze_0_axi_periph/S02_ARESETN] [get_bd_pins rst_clk_wiz_1_100M/peripheral_aresetn]
+save_bd_design
+set_property offset 0x80000000 [get_bd_addr_segs {microblaze_0/Data/SEG_mig_7series_0_memaddr}]
+set_property offset 0x80000000 [get_bd_addr_segs {microblaze_0/Instruction/SEG_mig_7series_0_memaddr}]
+set_property offset 0x80000000 [get_bd_addr_segs {axi_ethernet_0_dma/Data_SG/SEG_mig_7series_0_memaddr}]
+set_property offset 0x80000000 [get_bd_addr_segs {axi_ethernet_0_dma/Data_MM2S/SEG_mig_7series_0_memaddr}]
+set_property offset 0x80000000 [get_bd_addr_segs {axi_ethernet_0_dma/Data_S2MM/SEG_mig_7series_0_memaddr}]
+startgroup
+set_property -dict [list CONFIG.SD_DDR_BASE_ADDR {0x90000000}] [get_bd_cells sd_card_controller_0]
+endgroup
+startgroup
+set_property -dict [list CONFIG.C_M00_AXI_TARGET_SLAVE_BASE_ADDR {0x90000000}] [get_bd_cells hash_table_mgr_mig_0]
+endgroup
+save_bd_design
+startgroup
+exclude_bd_addr_seg [get_bd_addr_segs sd_card_controller_0/M00_AXI/SEG_microblaze_0_axi_intc_Reg]
+exclude_bd_addr_seg [get_bd_addr_segs sd_card_controller_0/M00_AXI/SEG_axi_ethernet_0_Reg0]
+exclude_bd_addr_seg [get_bd_addr_segs sd_card_controller_0/M00_AXI/SEG_axi_ethernet_0_dma_Reg]
+exclude_bd_addr_seg [get_bd_addr_segs sd_card_controller_0/M00_AXI/SEG_axi_gpio_0_Reg]
+exclude_bd_addr_seg [get_bd_addr_segs sd_card_controller_0/M00_AXI/SEG_axi_timer_0_Reg]
+exclude_bd_addr_seg [get_bd_addr_segs sd_card_controller_0/M00_AXI/SEG_axi_uartlite_0_Reg]
+exclude_bd_addr_seg [get_bd_addr_segs sd_card_controller_0/M00_AXI/SEG_hash_table_mgr_0_S00_AXI_reg]
+endgroup
+startgroup
+exclude_bd_addr_seg [get_bd_addr_segs hash_table_mgr_mig_0/M00_AXI/SEG_microblaze_0_axi_intc_Reg]
+exclude_bd_addr_seg [get_bd_addr_segs hash_table_mgr_mig_0/M00_AXI/SEG_axi_ethernet_0_Reg0]
+exclude_bd_addr_seg [get_bd_addr_segs hash_table_mgr_mig_0/M00_AXI/SEG_axi_ethernet_0_dma_Reg]
+exclude_bd_addr_seg [get_bd_addr_segs hash_table_mgr_mig_0/M00_AXI/SEG_axi_gpio_0_Reg]
+exclude_bd_addr_seg [get_bd_addr_segs hash_table_mgr_mig_0/M00_AXI/SEG_axi_timer_0_Reg]
+exclude_bd_addr_seg [get_bd_addr_segs hash_table_mgr_mig_0/M00_AXI/SEG_axi_uartlite_0_Reg]
+exclude_bd_addr_seg [get_bd_addr_segs hash_table_mgr_mig_0/M00_AXI/SEG_hash_table_mgr_0_S00_AXI_reg]
+endgroup
+set_property range 512M [get_bd_addr_segs {microblaze_0/Data/SEG_mig_7series_0_memaddr}]
+set_property range 512M [get_bd_addr_segs {microblaze_0/Instruction/SEG_mig_7series_0_memaddr}]
+set_property range 512M [get_bd_addr_segs {hash_table_mgr_mig_0/M00_AXI/SEG_mig_7series_0_memaddr}]
+set_property range 512M [get_bd_addr_segs {sd_card_controller_0/M00_AXI/SEG_mig_7series_0_memaddr}]
+set_property range 512M [get_bd_addr_segs {axi_ethernet_0_dma/Data_SG/SEG_mig_7series_0_memaddr}]
+set_property range 512M [get_bd_addr_segs {axi_ethernet_0_dma/Data_MM2S/SEG_mig_7series_0_memaddr}]
+set_property range 512M [get_bd_addr_segs {axi_ethernet_0_dma/Data_S2MM/SEG_mig_7series_0_memaddr}]
+save_bd_design
+validate_bd_design
+save_bd_design
+close_bd_design [get_bd_designs design_1]
+reset_run synth_1
+reset_run design_1_sd_card_controller_0_0_synth_1
+reset_run design_1_hash_table_mgr_mig_0_0_synth_1
+reset_run design_1_dlmb_bram_if_cntlr_0_synth_1
+reset_run design_1_ilmb_bram_if_cntlr_0_synth_1
+reset_run design_1_xbar_0_synth_1
+reset_run design_1_mig_7series_0_0_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+write_hwdef -force  -file C:/Users/jiangja5/hash_server/hash_server.sdk/design_1_wrapper.hdf
+launch_sdk -workspace C:/Users/jiangja5/hash_server/hash_server.sdk -hwspec C:/Users/jiangja5/hash_server/hash_server.sdk/design_1_wrapper.hdf

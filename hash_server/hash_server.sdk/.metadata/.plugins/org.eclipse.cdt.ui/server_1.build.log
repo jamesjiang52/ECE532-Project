@@ -1,6 +1,30 @@
-12:35:31 **** Incremental Build of configuration Debug for project server_1 ****
+15:32:20 **** Incremental Build of configuration Debug for project server_1 ****
 make all 
-make: Nothing to be done for 'all'.
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../server_1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:32:0:
+../../server_1_bsp/microblaze_0/include/xparameters.h:704:34: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+ #define XPAR_AXI_GPIO_0_BASEADDR 0x40000000
+                                  ^
+../src/main.c:55:37: note: in expansion of macro 'XPAR_AXI_GPIO_0_BASEADDR'
+ volatile unsigned int *reset_gpio = XPAR_AXI_GPIO_0_BASEADDR;
+                                     ^~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ../src/main.c:37:0:
+../src/main.c: In function 'main':
+../src/platform_config.h:5:32: error: 'XPAR_AXI_ETHERNETLITE_0_BASEADDR' undeclared (first use in this function); did you mean 'XPAR_AXI_ETHERNET_0_BASEADDR'?
+ #define PLATFORM_EMAC_BASEADDR XPAR_AXI_ETHERNETLITE_0_BASEADDR
+                                ^
+../src/main.c:179:7: note: in expansion of macro 'PLATFORM_EMAC_BASEADDR'
+       PLATFORM_EMAC_BASEADDR)) {
+       ^~~~~~~~~~~~~~~~~~~~~~
+../src/platform_config.h:5:32: note: each undeclared identifier is reported only once for each function it appears in
+ #define PLATFORM_EMAC_BASEADDR XPAR_AXI_ETHERNETLITE_0_BASEADDR
+                                ^
+../src/main.c:179:7: note: in expansion of macro 'PLATFORM_EMAC_BASEADDR'
+       PLATFORM_EMAC_BASEADDR)) {
+       ^~~~~~~~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:53: src/main.o] Error 1
 
-12:35:31 Build Finished (took 208ms)
+15:32:21 Build Finished (took 552ms)
 
