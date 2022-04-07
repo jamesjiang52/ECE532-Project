@@ -1,0 +1,287 @@
+/*
+
+Xilinx Vivado v2018.3.1 (64-bit) [Major: 2018, Minor: 3]
+SW Build: 2489853 on Tue Mar 26 04:20:25 MDT 2019
+IP Build: 2486929 on Tue Mar 26 06:44:21 MDT 2019
+
+Process ID (PID): 3400
+License: Customer
+
+Current time: 	Fri Mar 11 20:27:30 EST 2022
+Time zone: 	Eastern Standard Time (America/New_York)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 2560x1600
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 313 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	9.0.4 64-bit
+Java home: 	C:/DESL/Xilinx/Vivado/2018.3/tps/win64/jre9.0.4
+Java executable location: 	C:/DESL/Xilinx/Vivado/2018.3/tps/win64/jre9.0.4/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	jiangja5
+User home directory: C:/Users/jiangja5
+User working directory: C:/Users/jiangja5/hash_server
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: C:/DESL/Xilinx/Vivado
+HDI_APPROOT: C:/DESL/Xilinx/Vivado/2018.3
+RDI_DATADIR: C:/DESL/Xilinx/Vivado/2018.3/data
+RDI_BINDIR: C:/DESL/Xilinx/Vivado/2018.3/bin
+
+Vivado preferences file location: C:/Users/jiangja5/AppData/Roaming/Xilinx/Vivado/2018.3/vivado.xml
+Vivado preferences directory: C:/Users/jiangja5/AppData/Roaming/Xilinx/Vivado/2018.3/
+Vivado layouts directory: C:/Users/jiangja5/AppData/Roaming/Xilinx/Vivado/2018.3/layouts
+PlanAhead jar file location: 	C:/DESL/Xilinx/Vivado/2018.3/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/jiangja5/hash_server/vivado.log
+Vivado journal file location: 	C:/Users/jiangja5/hash_server/vivado.jou
+Engine tmp dir: 	C:/Users/jiangja5/hash_server/.Xil/Vivado-3400-BA3145WS26
+
+Xilinx Environment Variables
+----------------------------
+XILINX: C:/DESL/Xilinx/Vivado/2018.3/ids_lite/ISE
+XILINXD_LICENSE_FILE: 40012@mlm.ece.utoronto.ca;27012@mlm.ece.utoronto.ca
+XILINX_DSP: C:/DESL/Xilinx/Vivado/2018.3/ids_lite/ISE
+XILINX_PLANAHEAD: C:/DESL/Xilinx/Vivado/2018.3
+XILINX_SDK: C:/DESL/Xilinx/SDK/2018.3
+XILINX_VIVADO: C:/DESL/Xilinx/Vivado/2018.3
+XILINX_VIVADO_HLS: C:/DESL/Xilinx/Vivado/2018.3
+
+
+GUI allocated memory:	154 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 613 MB
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// TclEventType: PROJECT_OPEN_DIALOG
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 63 MB (+63746kb) [00:00:05]
+// [Engine Memory]: 548 MB (+422984kb) [00:00:05]
+// bx (cp):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\jiangja5\hash_server\hash_server.xpr. Version: Vivado v2018.3.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project C:/Users/jiangja5/hash_server/hash_server.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 654 MB. GUI used memory: 41 MB. Current time: 3/11/22, 8:27:32 PM EST
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 746 MB (+179028kb) [00:07:48]
+// [GUI Memory]: 76 MB (+9733kb) [00:07:48]
+// [GUI Memory]: 95 MB (+16768kb) [00:07:49]
+// WARNING: HEventQueue.dispatchEvent() is taking  3227 ms.
+// Tcl Message: open_project C:/Users/jiangja5/hash_server/hash_server.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository 'w:/ECE532/project'. INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/DESL/Xilinx/Vivado/2018.3/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 769 MB. GUI used memory: 43 MB. Current time: 3/11/22, 8:35:13 PM EST
+// Project name: hash_server; location: C:/Users/jiangja5/hash_server; part: xc7a200tsbg484-1
+// Tcl Message: open_project: Time (s): cpu = 00:00:19 ; elapsed = 00:07:46 . Memory (MB): peak = 813.531 ; gain = 202.828 
+dismissDialog("Open Project"); // bx (cp)
+// a (cp): Critical Messages: addNotify
+// [Engine Memory]: 785 MB (+1797kb) [00:08:27]
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 1251 ms. Increasing delay to 3753 ms.
+// Elapsed time: 407 seconds
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (a)
+dismissDialog("Critical Messages"); // a (cp)
+// [GUI Memory]: 114 MB (+14483kb) [00:14:44]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Configuration Files]", 6, true); // B (D, cp) - Node
+// [GUI Memory]: 132 MB (+12345kb) [00:14:44]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Configuration Files, board.prj]", 7, false); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Configuration Files]", 6, true); // B (D, cp) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Configuration Files]", 6, true, false, false, false, true, false); // B (D, cp) - Popup Trigger - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Configuration Files]", 6, true); // B (D, cp) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Configuration Files, board.prj]", 7, false); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Configuration Files, board.prj]", 7, false, false, false, false, true, false); // B (D, cp) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // af (al, cp)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// aE (cp): Remove Sources: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aE)
+dismissDialog("Remove Sources"); // aE (cp)
+// Tcl Message: export_ip_user_files -of_objects  [get_files C:/Users/jiangja5/hash_server/hash_server.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/board.prj] -no_script -reset -force -quiet 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files  C:/Users/jiangja5/hash_server/hash_server.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/board.prj 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Configuration Files, mig_a.prj]", 7, false); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Configuration Files, mig_a.prj]", 7, false, false, false, false, true, false); // B (D, cp) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // af (al, cp)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// aE (cp): Remove Sources: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aE)
+dismissDialog("Remove Sources"); // aE (cp)
+// Tcl Message: export_ip_user_files -of_objects  [get_files C:/Users/jiangja5/hash_server/hash_server.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/mig_a.prj] -no_script -reset -force -quiet 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files  C:/Users/jiangja5/hash_server/hash_server.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/mig_a.prj 
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "Hierarchy", 0); // i (N, cp)
+selectButton(PAResourceEtoH.FileSetPanel_RELOAD, "Reload..."); // h (cQ, cp)
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // ac (cp)
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // X (q, cp)
+selectMenu(RDIResourceCommand.RDICommands_CUSTOM_COMMANDS, "Custom Commands"); // ac (cp)
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // X (q, cp)
+selectButton(PAResourceEtoH.FileSetPanel_RELOAD, "Reload..."); // h (cQ, cp)
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // ac (cp)
+selectMenuItem(PAResourceQtoS.SrcMenu_REFRESH_HIERARCHY, "Refresh Hierarchy"); // af (cp)
+// bx (cp):  Update Design Hierarchy : addNotify
+dismissDialog("Update Design Hierarchy"); // bx (cp)
+// Elapsed time: 18 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 2); // B (D, cp)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 5); // B (D, cp)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Utility Sources]", 9); // B (D, cp)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1]", 3); // B (D, cp)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1]", 3); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, eth_ref_clk.xdc]", 4, false); // B (D, cp)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v)]", 1); // B (D, cp)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, IP Integrator, Open Block Design]", 7, false); // u (Q, cp)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_BLOCK_DESIGN
+// bx (cp):  Open Block Design : addNotify
+// TclEventType: LOAD_FEATURE
+// Tcl Message: open_bd_design {C:/Users/jiangja5/hash_server/hash_server.srcs/sources_1/bd/design_1/design_1.bd} 
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: LOAD_FEATURE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_OPEN_DIAGRAM
+// HMemoryUtils.trashcanNow. Engine heap size: 799 MB. GUI used memory: 58 MB. Current time: 3/11/22, 8:43:18 PM EST
+// TclEventType: RSB_OPEN_DIAGRAM
+// [Engine Memory]: 852 MB (+29274kb) [00:15:58]
+// WARNING: HEventQueue.dispatchEvent() is taking  2544 ms.
+// TclEventType: RSB_CONNECTION_CHANGE
+// Elapsed time: 11 seconds
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// TclEventType: RSB_LOCK_CHANGE
+// Tcl Message: open_bd_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:11 . Memory (MB): peak = 937.258 ; gain = 109.879 
+// 'bA' command handler elapsed time: 11 seconds
+dismissDialog("Open Block Design"); // bx (cp)
+// Elapsed time: 16 seconds
+selectTab((HResource) null, (HResource) null, "Sources", 0); // aI (aF, cp)
+// [Engine Memory]: 902 MB (+7188kb) [00:16:22]
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager, Settings]", 1, false); // u (Q, cp)
+// Run Command: RDIResourceCommand.RDICommands_SETTINGS
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+// F (cp): Settings: addNotify
+// WARNING: HEventQueue.dispatchEvent() is taking  1703 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 931 MB. GUI used memory: 64 MB. Current time: 3/11/22, 8:43:48 PM EST
+// Elapsed time: 11 seconds
+expandTree(PAResourceQtoS.SettingsDialog_PROJECT_TREE, "[projectRoot, IP]", 6); // L (C, F)
+selectTree(PAResourceQtoS.SettingsDialog_PROJECT_TREE, "[projectRoot, IP, Repository]", 7, false); // L (C, F)
+selectButton(PAResourceQtoS.SettingsProjectIPRepositoryPage_REFRESH_ALL, "Refresh All"); // a (C, F)
+// TclEventType: CREATE_IP_CATALOG
+// bx (cp):  Refresh All IP Repositories : addNotify
+// Tcl Message: update_ip_catalog -rebuild 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories 
+// Elapsed time: 93 seconds
+selectButton(RDIResource.ProgressDialog_CANCEL, "Cancel"); // a (bx)
+// TclEventType: CREATE_IP_CATALOG
+// CommandFailedException: ERROR: [Common 17-69] Command failed:  
+// Tcl Message: INFO: [Common 17-41] Interrupt caught. Command should exit soon. INFO: [IP_Flow 19-2338] Canceling the changes to the IP catalog. Reverting the catalog back to its previous state. INFO: [IP_Flow 19-2339] Reverted back to using user repository w:/ECE532/project. INFO: [IP_Flow 19-2340] The IP catalog has been returned to its previous state. 
+// Tcl Message: update_ip_catalog: Time (s): cpu = 00:00:03 ; elapsed = 00:01:33 . Memory (MB): peak = 971.609 ; gain = 0.000 
+// Tcl Message: INFO: [Common 17-344] 'update_ip_catalog' was cancelled 
+dismissDialog("Refresh All IP Repositories"); // bx (cp)
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (F)
+dismissDialog("Settings"); // F (cp)
+// Elapsed time: 38 seconds
+selectButton(PAResourceQtoS.SystemTab_REPORT_IP_STATUS, "Report IP Status"); // h (cQ, cp)
+// Run Command: PAResourceCommand.PACommandNames_REPORT_IP_STATUS
+// Tcl Command: 'report_ip_status -name ip_status '
+// TclEventType: IP_SUMMARY_RESULTS
+// bx (cp):  Report IP Status : addNotify
+// Tcl Message: report_ip_status -name ip_status  
+dismissDialog("Report IP Status"); // bx (cp)
+selectButton(PAResourceItoN.IPStatusSectionPanel_UPGRADE_SELECTED, "Upgrade Selected"); // a (g, cp)
+// Run Command: PAResourceCommand.PACommandNames_UPGRADE_IP
+// ah (cp): Upgrade IP: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// TclEventType: RSB_OPEN_DIAGRAM
+dismissDialog("Upgrade IP"); // ah (cp)
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: upgrade_ip [get_ips  {design_1_hash_table_mgr_0_0 design_1_hash_table_mgr_mig_0_0}] -log ip_upgrade.log 
+// Tcl Message: Upgrading 'C:/Users/jiangja5/hash_server/hash_server.srcs/sources_1/bd/design_1/design_1.bd' 
+// Tcl Message: ERROR: [BD 41-1081] Could not upgrade cell (hash_table_mgr_0) - Cannot upgrade to unknown target 'user.org:user:hash_table_mgr:1.0'   ERROR: [BD 41-1081] Could not upgrade cell (hash_table_mgr_mig_0) - Cannot upgrade to unknown target 'user.org:user:hash_table_mgr_mig:1.0'   
+// bx (cp):  Upgrade IP : addNotify
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILESET_UPDATE_IP
+// Tcl Message: Wrote  : <C:/Users/jiangja5/hash_server/hash_server.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui>  
+// Tcl Message: ERROR: [Common 17-39] 'upgrade_ip' failed due to earlier errors. 
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'upgrade_ip' failed due to earlier errors.  
+// a (cp): Critical Messages: addNotify
+dismissDialog("Upgrade IP"); // bx (cp)
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (a)
+dismissDialog("Critical Messages"); // a (cp)
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // X (q, cp)
+selectMenu(RDIResourceCommand.RDICommands_CUSTOM_COMMANDS, "Custom Commands"); // ac (cp)
+selectMenuItem(RDIResourceCommand.RDICommands_SETTINGS, "Settings..."); // af (cp)
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // X (q, cp)
+// Run Command: RDIResourceCommand.RDICommands_SETTINGS
+// F (cp): Settings: addNotify

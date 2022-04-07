@@ -1196,3 +1196,251 @@ con
 ----------------End of Script----------------
 
 12:35:35 INFO  : Disconnected from the channel tcfchan#3.
+17:00:32 INFO  : Registering command handlers for SDK TCF services
+17:00:33 INFO  : Launching XSCT server: xsct.bat -interactive C:\Users\jiangja5\hash_server\hash_server.sdk\temp_xsdb_launch_script.tcl
+17:00:35 INFO  : XSCT server has started successfully.
+17:00:37 INFO  : Successfully done setting XSCT server connection channel  
+17:00:37 INFO  : Successfully done setting SDK workspace  
+17:00:37 INFO  : Processing command line option -hwspec C:/Users/jiangja5/hash_server/hash_server.sdk/design_1_wrapper.hdf.
+17:00:37 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_1.
+17:00:40 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1647122405988,  Project:1646019408223
+17:00:40 INFO  : The hardware specification for project 'design_1_wrapper_hw_platform_1' is different from C:/Users/jiangja5/hash_server/hash_server.sdk/design_1_wrapper.hdf.
+17:00:40 INFO  : Copied contents of C:/Users/jiangja5/hash_server/hash_server.sdk/design_1_wrapper.hdf into \design_1_wrapper_hw_platform_1\system.hdf.
+17:00:41 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+17:00:46 INFO  : 
+17:00:47 INFO  : Updating hardware inferred compiler options for server_1.
+17:00:47 INFO  : Clearing existing target manager status.
+15:20:40 INFO  : Registering command handlers for SDK TCF services
+15:20:41 INFO  : Launching XSCT server: xsct.bat -interactive C:\Users\jiangja5\hash_server\hash_server.sdk\temp_xsdb_launch_script.tcl
+15:20:44 INFO  : XSCT server has started successfully.
+15:20:44 INFO  : Successfully done setting XSCT server connection channel  
+15:20:46 INFO  : Successfully done setting SDK workspace  
+15:20:46 INFO  : Processing command line option -hwspec C:/Users/jiangja5/hash_server/hash_server.sdk/design_1_wrapper.hdf.
+15:20:46 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_1.
+15:22:36 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys Video 210276723936B" && level==0} -index 0' command is executed.
+15:22:36 INFO  : 'fpga -state' command is executed.
+15:22:36 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:22:36 INFO  : Jtag cable 'Digilent Nexys Video 210276723936B' is selected.
+15:22:36 INFO  : 'jtag frequency' command is executed.
+15:22:36 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+15:22:36 INFO  : Context for processor 'microblaze_0' is selected.
+15:22:36 INFO  : System reset is completed.
+15:22:39 INFO  : 'after 3000' command is executed.
+15:22:39 INFO  : Context for processor 'microblaze_0' is selected.
+15:22:39 INFO  : The application 'C:/Users/jiangja5/hash_server/hash_server.sdk/server_1/Debug/server_1.elf' is downloaded to processor 'microblaze_0'.
+15:22:39 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276723936B"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276723936B"} -index 0
+dow C:/Users/jiangja5/hash_server/hash_server.sdk/server_1/Debug/server_1.elf
+----------------End of Script----------------
+
+15:22:40 INFO  : Context for processor 'microblaze_0' is selected.
+15:22:40 INFO  : 'con' command is executed.
+15:22:40 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276723936B"} -index 0
+con
+----------------End of Script----------------
+
+15:22:40 INFO  : Disconnected from the channel tcfchan#1.
+15:26:03 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1647285960996,  Project:1647122405988
+15:26:03 INFO  : Project design_1_wrapper_hw_platform_1's source hardware specification located at C:/Users/jiangja5/hash_server/hash_server.sdk/design_1_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+15:26:26 INFO  : Copied contents of C:/Users/jiangja5/hash_server/hash_server.sdk/design_1_wrapper.hdf into \design_1_wrapper_hw_platform_1\system.hdf.
+15:26:27 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+15:26:29 INFO  : 
+15:26:30 INFO  : Updating hardware inferred compiler options for server_1.
+15:26:30 INFO  : Clearing existing target manager status.
+15:26:30 INFO  : Closing and re-opening the MSS file of ther project server_1_bsp
+15:26:30 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+15:26:31 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+15:28:26 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1647286105312,  Project:1647285960996
+15:28:26 INFO  : Project design_1_wrapper_hw_platform_1's source hardware specification located at C:/Users/jiangja5/hash_server/hash_server.sdk/design_1_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+15:28:34 INFO  : Copied contents of C:/Users/jiangja5/hash_server/hash_server.sdk/design_1_wrapper.hdf into \design_1_wrapper_hw_platform_1\system.hdf.
+15:28:35 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+15:28:38 INFO  : 
+15:28:38 INFO  : Updating hardware inferred compiler options for server_1.
+15:28:38 INFO  : Clearing existing target manager status.
+15:28:38 INFO  : Closing and re-opening the MSS file of ther project server_1_bsp
+15:28:39 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+15:28:40 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+15:30:19 INFO  : Project 'design_1_wrapper_hw_platform_2' created. You can now create BSPs and application projects targeting this hardware platform.
+15:32:26 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys Video 210276723936B" && level==0} -index 0' command is executed.
+15:32:26 INFO  : 'fpga -state' command is executed.
+15:32:26 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:32:26 INFO  : Jtag cable 'Digilent Nexys Video 210276723936B' is selected.
+15:32:26 INFO  : 'jtag frequency' command is executed.
+15:32:26 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+15:32:26 INFO  : Context for processor 'microblaze_0' is selected.
+15:32:27 INFO  : System reset is completed.
+15:32:30 INFO  : 'after 3000' command is executed.
+15:32:30 INFO  : Context for processor 'microblaze_0' is selected.
+15:32:30 INFO  : The application 'C:/Users/jiangja5/hash_server/hash_server.sdk/server_2/Debug/server_2.elf' is downloaded to processor 'microblaze_0'.
+15:32:30 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276723936B"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276723936B"} -index 0
+dow C:/Users/jiangja5/hash_server/hash_server.sdk/server_2/Debug/server_2.elf
+----------------End of Script----------------
+
+15:32:30 INFO  : Context for processor 'microblaze_0' is selected.
+15:32:30 INFO  : 'con' command is executed.
+15:32:30 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276723936B"} -index 0
+con
+----------------End of Script----------------
+
+15:32:30 INFO  : Disconnected from the channel tcfchan#2.
+15:33:40 INFO  : Refreshed build settings on project server_2
+15:34:32 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys Video 210276723936B" && level==0} -index 0' command is executed.
+15:34:32 INFO  : 'fpga -state' command is executed.
+15:34:32 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:34:32 INFO  : Jtag cable 'Digilent Nexys Video 210276723936B' is selected.
+15:34:32 INFO  : 'jtag frequency' command is executed.
+15:34:32 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+15:34:32 INFO  : Context for processor 'microblaze_0' is selected.
+15:34:32 INFO  : System reset is completed.
+15:34:35 INFO  : 'after 3000' command is executed.
+15:34:35 INFO  : Context for processor 'microblaze_0' is selected.
+15:34:36 INFO  : The application 'C:/Users/jiangja5/hash_server/hash_server.sdk/server_2/Debug/server_2.elf' is downloaded to processor 'microblaze_0'.
+15:34:36 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276723936B"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276723936B"} -index 0
+dow C:/Users/jiangja5/hash_server/hash_server.sdk/server_2/Debug/server_2.elf
+----------------End of Script----------------
+
+15:34:36 INFO  : Context for processor 'microblaze_0' is selected.
+15:34:36 INFO  : 'con' command is executed.
+15:34:36 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276723936B"} -index 0
+con
+----------------End of Script----------------
+
+15:34:36 INFO  : Disconnected from the channel tcfchan#3.
+15:38:45 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys Video 210276723936B" && level==0} -index 0' command is executed.
+15:38:45 INFO  : 'fpga -state' command is executed.
+15:38:45 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:38:46 INFO  : Jtag cable 'Digilent Nexys Video 210276723936B' is selected.
+15:38:46 INFO  : 'jtag frequency' command is executed.
+15:38:46 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+15:38:46 INFO  : Context for processor 'microblaze_0' is selected.
+15:38:46 INFO  : System reset is completed.
+15:38:49 INFO  : 'after 3000' command is executed.
+15:38:49 INFO  : Context for processor 'microblaze_0' is selected.
+15:38:49 INFO  : The application 'C:/Users/jiangja5/hash_server/hash_server.sdk/server_2/Debug/server_2.elf' is downloaded to processor 'microblaze_0'.
+15:38:49 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276723936B"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276723936B"} -index 0
+dow C:/Users/jiangja5/hash_server/hash_server.sdk/server_2/Debug/server_2.elf
+----------------End of Script----------------
+
+15:38:49 INFO  : Context for processor 'microblaze_0' is selected.
+15:38:49 INFO  : 'con' command is executed.
+15:38:49 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276723936B"} -index 0
+con
+----------------End of Script----------------
+
+15:38:49 INFO  : Disconnected from the channel tcfchan#4.
+15:40:38 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys Video 210276723936B" && level==0} -index 0' command is executed.
+15:40:38 INFO  : 'fpga -state' command is executed.
+15:40:38 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:40:39 INFO  : Jtag cable 'Digilent Nexys Video 210276723936B' is selected.
+15:40:39 INFO  : 'jtag frequency' command is executed.
+15:40:39 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+15:40:39 INFO  : Context for processor 'microblaze_0' is selected.
+15:40:39 INFO  : System reset is completed.
+15:40:42 INFO  : 'after 3000' command is executed.
+15:40:42 INFO  : Context for processor 'microblaze_0' is selected.
+15:40:42 INFO  : The application 'C:/Users/jiangja5/hash_server/hash_server.sdk/server_2/Debug/server_2.elf' is downloaded to processor 'microblaze_0'.
+15:40:42 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276723936B"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276723936B"} -index 0
+dow C:/Users/jiangja5/hash_server/hash_server.sdk/server_2/Debug/server_2.elf
+----------------End of Script----------------
+
+15:40:42 INFO  : Context for processor 'microblaze_0' is selected.
+15:40:42 INFO  : 'con' command is executed.
+15:40:42 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276723936B"} -index 0
+con
+----------------End of Script----------------
+
+15:40:42 INFO  : Disconnected from the channel tcfchan#5.
+16:45:13 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys Video 210276723936B" && level==0} -index 0' command is executed.
+16:45:13 INFO  : 'fpga -state' command is executed.
+16:45:13 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:45:13 INFO  : Jtag cable 'Digilent Nexys Video 210276723936B' is selected.
+16:45:13 INFO  : 'jtag frequency' command is executed.
+16:45:13 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+16:45:13 INFO  : Context for processor 'microblaze_0' is selected.
+16:45:13 INFO  : System reset is completed.
+16:45:16 INFO  : 'after 3000' command is executed.
+16:45:16 INFO  : Context for processor 'microblaze_0' is selected.
+16:45:17 INFO  : The application 'C:/Users/jiangja5/hash_server/hash_server.sdk/server_2/Debug/server_2.elf' is downloaded to processor 'microblaze_0'.
+16:45:17 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276723936B"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276723936B"} -index 0
+dow C:/Users/jiangja5/hash_server/hash_server.sdk/server_2/Debug/server_2.elf
+----------------End of Script----------------
+
+16:45:17 INFO  : Context for processor 'microblaze_0' is selected.
+16:45:17 INFO  : 'con' command is executed.
+16:45:17 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276723936B"} -index 0
+con
+----------------End of Script----------------
+
+16:45:17 INFO  : Disconnected from the channel tcfchan#6.
+16:46:10 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys Video 210276723936B" && level==0} -index 0' command is executed.
+16:46:10 INFO  : 'fpga -state' command is executed.
+16:46:10 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:46:10 INFO  : Jtag cable 'Digilent Nexys Video 210276723936B' is selected.
+16:46:10 INFO  : 'jtag frequency' command is executed.
+16:46:10 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+16:46:10 INFO  : Context for processor 'microblaze_0' is selected.
+16:46:10 INFO  : System reset is completed.
+16:46:13 INFO  : 'after 3000' command is executed.
+16:46:13 INFO  : Context for processor 'microblaze_0' is selected.
+16:46:14 INFO  : The application 'C:/Users/jiangja5/hash_server/hash_server.sdk/server_2/Debug/server_2.elf' is downloaded to processor 'microblaze_0'.
+16:46:14 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276723936B"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276723936B"} -index 0
+dow C:/Users/jiangja5/hash_server/hash_server.sdk/server_2/Debug/server_2.elf
+----------------End of Script----------------
+
+16:46:14 INFO  : Context for processor 'microblaze_0' is selected.
+16:46:14 INFO  : 'con' command is executed.
+16:46:14 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276723936B"} -index 0
+con
+----------------End of Script----------------
+
+16:46:14 INFO  : Disconnected from the channel tcfchan#7.

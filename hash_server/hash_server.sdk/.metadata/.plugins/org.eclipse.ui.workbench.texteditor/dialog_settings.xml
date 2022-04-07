@@ -2,12 +2,14 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="print_app_header" key="selection"/>
+		<item value="XPAR_AXI_GPIO_0_BASEADDR" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="XPAR_AXI_GPIO_0_BASEADDR"/>
+			<item value="GPIO"/>
 			<item value="print_app_header"/>
 			<item value="tpcb"/>
 			<item value="Index"/>

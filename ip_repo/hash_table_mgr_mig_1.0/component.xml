@@ -247,7 +247,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>406384d2</spirit:value>
+            <spirit:value>49024b45</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -263,7 +263,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>406384d2</spirit:value>
+            <spirit:value>49024b45</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -366,6 +366,23 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
+        <spirit:name>o_ht_output_client</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">0</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
         <spirit:name>o_ht_output_valid</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
@@ -448,6 +465,23 @@
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
             <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.HASH_TABLE_OP_WIDTH&apos;)) - 1)">1</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>i_ht_input_client</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">0</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -867,7 +901,7 @@
       <spirit:file>
         <spirit:name>hdl/hash_table_mgr_mig_v1_0.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_e810fe59</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_1ff72d69</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -984,8 +1018,8 @@
         <xilinx:taxonomy>AXI_Peripheral</xilinx:taxonomy>
       </xilinx:taxonomies>
       <xilinx:displayName>hash_table_mgr_mig_v1.0</xilinx:displayName>
-      <xilinx:coreRevision>54</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2022-03-01T22:24:43Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>62</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2022-03-09T20:35:26Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@36cfb0a_ARCHIVE_LOCATION">/nfs/ug/homes-3/j/jiangja5/ece532/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@72c28d09_ARCHIVE_LOCATION">/nfs/ug/homes-3/j/jiangja5/ece532/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
@@ -1917,14 +1951,129 @@
         <xilinx:tag xilinx:name="ui.data.coregen.df@103a0899_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.df@3967c331_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.df@c806481_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@63fc2d0c_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6692b5ca_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@264e65d0_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@f79afa0_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5a902d59_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4db645a7_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@51a9a6ba_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@189851bf_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7d2c08ed_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1899ca19_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@18ae3f0a_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6772ea21_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1834f71b_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@36c51be_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@42dd46db_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@979ce2c_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1a0b1f45_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3a55031_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@29d2d0f1_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3a6b5a13_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4cad0958_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1f50702_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@18cf57ec_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3a81abe_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5ec9ba86_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4778f99c_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4f188aeb_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1fb0e8aa_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5ababa61_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@283368f6_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@261e2389_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3bfc7285_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5bd8bd16_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@65709599_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5adecf25_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@181218a7_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6b5b4324_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@30121aa6_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@24b6d6d7_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1ef9b17a_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2c52ae64_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@32a3cd13_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@713e297a_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@23c92f42_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@716c446_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@217e956_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1e1e4a47_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@12b91ffe_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5c2712b7_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@40aa1dd4_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2820c378_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4dfd651f_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@773c1543_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5e810ed2_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2403b895_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5cc85171_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@281c4508_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6f330a44_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@71d37018_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@751f6b1e_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1a7f21e1_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@75b3b21b_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6458e5b1_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@208bcd13_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7ae317f6_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@506c9508_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2e6f2092_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@32e1e4e4_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@411f3e20_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@686be6fe_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3ab95747_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7a4c856f_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2c5730d9_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@50e16fee_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@37a1c432_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@72dcc151_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@420d738a_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3a3a0ff3_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3c432e7f_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2ec89b05_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2061f05a_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@73e28df9_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5427aa4c_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5ae2105f_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@14a15b3_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@719048fa_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@60641ec1_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1ae2305b_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@70a14d6d_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@654f6361_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@26a09950_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@244f45d9_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@59b6306e_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@47911fd9_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3c03754f_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@308620f3_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4d2f0b55_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@436e12a6_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5c07a96e_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4a249741_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6099fb7f_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5acd582a_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2801f131_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@26fc7c8d_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@f9d79fb_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@591157c5_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@29116da9_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5d385115_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6c0158a4_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3bbcf57_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2b7d3c08_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@76fedc20_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@74374160_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2421dacf_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@c662962_ARCHIVE_LOCATION">e:/Documents/ECE532-Labs/project/ip_repo/hash_table_mgr_mig_1.0</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2021.2</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="188e99b4"/>
       <xilinx:checksum xilinx:scope="addressSpaces" xilinx:value="55bfeea0"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="bd952e94"/>
-      <xilinx:checksum xilinx:scope="ports" xilinx:value="fee7d2d8"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="8337f022"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="a7e59bb7"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="113dda6e"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="c21e3a66"/>
     </xilinx:packagingInfo>
