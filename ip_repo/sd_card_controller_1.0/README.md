@@ -2,7 +2,7 @@
 
 ## 1. Overview
 
-The SD Card Controller IP is responsible for data transfer directly from the SD card to the DDR memory on the FPGA. The IP block bypasses the Microblaze during data transfer to achieve better performance. The SD card controller references the open-source module ([https://github.com/jono-m/mariokart/blob/master/v1/v1.srcs/sources\_1/new/sd\_controller.v](https://github.com/jono-m/mariokart/blob/master/v1/v1.srcs/sources_1/new/sd_controller.v)) as a skeleton and modified for specific functionalities and applications based on it. Note that depending on the SD card used, the initialization sequence might be different. This IP core uses Gigastone Camera Plus 32GB MicroSD card.
+The SD Card Controller IP is responsible for data transfer directly from the SD card to the DDR memory on the FPGA. The IP block bypasses the Microblaze during data transfer to achieve better performance. The SD card controller references the open-source module ([https://github.com/jono-m/mariokart/blob/master/v1/v1.srcs/sources\_1/new/sd\_controller.v](https://github.com/jono-m/mariokart/blob/master/v1/v1.srcs/sources_1/new/sd_controller.v)) as a skeleton and modified for specific functionalities and applications based on it. Note that depending on the SD card used, the initialization sequence might be different. This IP core uses Gigastone Camera Plus 32GB MicroSD card. mem2.bin is a binary file that contains the pre-trained spam detection probabilistic model. First load the binary file onto the SD card using the HxD software (https://mh-nexus.de/en/hxd/).
 
 ## 2. Block Diagram 
 
