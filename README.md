@@ -16,8 +16,8 @@ All FPGAs have been connected over the network to a computer for performance mon
       *  gui/perf_gui.py: Python performance GUI
   * hash_client - contains the client system files including software components
       * [hash_client/client_proj](hash_client)
-      * [client_proj.sdk/client_w_spam/src/main.c](hash_client/client_proj.sdk/client_w_spam/src/main.c): MicroBlaze code for hash client
-      * [client_proj.srcs/sources_1/bd/design_1/design_1.bd](hash_client/client_proj.srcs/sources_1/bd/design_1): block design for hash client
+      * [client_proj.sdk/client_w_spam/src/main.c](client_proj.sdk/client_w_spam/src/main.c): MicroBlaze code for hash client
+      * [client_proj.srcs/sources_1/bd/design_1/design_1.bd](client_proj.srcs/sources_1/bd/design_1): block design for hash client
   * hash_server - contains the server system files including software components
       * [server_3/src/main.c](hash_server/server_3/src/main.c): MicroBlaze code for hash server
       * [hash_server.srcs/sources_1/bd/design_1/design_1.bd](hash_server/hash_server.srcs/sources_1/bd/design_1): block design for hash server
