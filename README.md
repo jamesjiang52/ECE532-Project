@@ -3,6 +3,13 @@
 **SPAM EMAIL DETECTION SYSTEM**
 This project utilizes parallel hash table to implement a spam email detection system.
 
+The system uses one Server FPGA and two Client FPGAs for parallel access. 
+The Server FPGA contains the pre-trained probabilistic model in the hash table and is responsible for different operations of the hash table. 
+The Client FPGAs first receive emails to be filtered and run the hashing algorithm to generate access keys to fetch probabilistic data from the Server FPGA. 
+After receiving back the data from the Server FPGA, the Client FPGA will process the data and run the spam detection inference algorithm.
+All FPGAs have been connected over the network to a computer for performance monitoring and analysis.
+
+![Alt text](System_Diagram.jpg?raw=true "Title")
 
 ## Directory Contents
   * gui - contains gui scripts
